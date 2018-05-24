@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package main;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+
+enum SignatureScheme {
+	SignatureSchemeUnknown = 0;
+
+	ES256 = 1 [(gogoproto.enumvalue_customname) = "ES256"];
+	ES384 = 2 [(gogoproto.enumvalue_customname) = "ES384"];
+	ES512 = 3 [(gogoproto.enumvalue_customname) = "ES512"];
+
+	RS256 = 9  [(gogoproto.enumvalue_customname) = "RS256"];
+	RS384 = 10 [(gogoproto.enumvalue_customname) = "RS384"];
+	RS512 = 11 [(gogoproto.enumvalue_customname) = "RS512"];
+}
+
+message Entry {
+	bytes deviceID  = 1;
+	bytes key       = 2;
+	bytes signature = 3;
+	SignatureScheme scheme = 4;
+}

@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package revdialgrpc;
+
+message Empty {
+}
+
+message GreetMsg {
+	string Name = 1;
+}
+
+message GreetReply {
+	string hostname = 1;
+	string user = 2;
+	string homedir = 3;
+}
+
+message ExecCommand {
+	string name = 1;
+	repeated string arg = 2;
+}
+
+message ExecStream {
+	oneof Log {
+		string Stdout = 1;
+		string Stderr = 2;
+	}
+}
+
+service Greeter {
+	rpc Greet(GreetMsg) returns (GreetReply);
+	rpc Exec(ExecCommand) returns (stream ExecStream);
+}

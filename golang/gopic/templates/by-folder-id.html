@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+	<title>{{.Title}}</title>
+	<link rel="stylesheet" href="/static/css/swipebox.min.css">
+	<style>
+		img.lazy {
+			height: 150px;
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	{{ range .Images }}
+	<a href="/by-id-resized/{{ .Hash }}/1200" class="swipebox" title="{{ .Filename }}">
+		<img class="lazy" data-src="/by-id-resized/{{ .Hash }}/200" />
+	</a>
+	{{ end }}
+	<script src="/static/js/jquery.min.js"></script>
+	<script src="/static/js/jquery.lazy.min.js"></script>
+	<script src="/static/js/jquery.swipebox.min.js"></script>
+	<script type="text/javascript">
+		$( document ).ready(function() {
+			$(".lazy").lazy();
+			$( '.swipebox' ).swipebox();
+		});
+	</script>
+</body>
+</html>

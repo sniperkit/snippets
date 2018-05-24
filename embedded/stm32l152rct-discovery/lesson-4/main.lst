@@ -1,0 +1,143 @@
+ARM GAS  main.s 			page 1
+
+
+   1              	.thumb
+   2              	.cpu cortex-m3
+   3              	.syntax unified
+   4              	
+   5              	.equ STACKINIT,0x20002000
+   6              	
+   7              	.section .text
+   8              		.org 0
+   9              	
+  10              	isr_vectors:
+  11              		.equ  BootRAM, 0xF108F85F
+  12              	
+  13 0000 00200020 		.word STACKINIT
+  14 0004 00000000 		.word start    // Reset_Handler
+  15 0008 58010000 		.word _handler // NMI_Handler
+  16 000c 58010000 		.word _handler // HardFault_Handler
+  17 0010 58010000 		.word _handler // MemManage_Handler
+  18 0014 58010000 		.word _handler // BusFault_Handler
+  19 0018 58010000 		.word _handler // UsageFault_Handler
+  20 001c 58010000 		.word _handler // 0
+  21 0020 58010000 		.word _handler // 0
+  22 0024 58010000 		.word _handler // 0
+  23 0028 58010000 		.word _handler // 0
+  24 002c 58010000 		.word _handler // SVC_Handler
+  25 0030 58010000 		.word _handler // DebugMon_Handler
+  26 0034 58010000 		.word _handler // 0
+  27 0038 58010000 		.word _handler // PendSV_Handler
+  28 003c 58010000 		.word _handler // SysTick_Handler
+  29 0040 58010000 		.word _handler // WWDG_IRQHandler
+  30 0044 58010000 		.word _handler // PVD_IRQHandler
+  31 0048 58010000 		.word _handler // TAMPER_STAMP_IRQHandler
+  32 004c 58010000 		.word _handler // RTC_WKUP_IRQHandler
+  33 0050 58010000 		.word _handler // FLASH_IRQHandler
+  34 0054 58010000 		.word _handler // RCC_IRQHandler
+  35 0058 58010000 		.word _handler // EXTI0_IRQHandler
+  36 005c 58010000 		.word _handler // EXTI1_IRQHandler
+  37 0060 58010000 		.word _handler // EXTI2_IRQHandler
+  38 0064 58010000 		.word _handler // EXTI3_IRQHandler
+  39 0068 58010000 		.word _handler // EXTI4_IRQHandler
+  40 006c 58010000 		.word _handler // DMA1_Channel1_IRQHandler
+  41 0070 58010000 		.word _handler // DMA1_Channel2_IRQHandler
+  42 0074 58010000 		.word _handler // DMA1_Channel3_IRQHandler
+  43 0078 58010000 		.word _handler // DMA1_Channel4_IRQHandler
+  44 007c 58010000 		.word _handler // DMA1_Channel5_IRQHandler
+  45 0080 58010000 		.word _handler // DMA1_Channel6_IRQHandler
+  46 0084 58010000 		.word _handler // DMA1_Channel7_IRQHandler
+  47 0088 58010000 		.word _handler // ADC1_IRQHandler
+  48 008c 58010000 		.word _handler // USB_HP_IRQHandler
+  49 0090 58010000 		.word _handler // USB_LP_IRQHandler
+  50 0094 58010000 		.word _handler // DAC_IRQHandler
+  51 0098 58010000 		.word _handler // COMP_IRQHandler
+  52 009c 58010000 		.word _handler // EXTI9_5_IRQHandler
+  53 00a0 58010000 		.word _handler // LCD_IRQHandler  
+  54 00a4 58010000 		.word _handler // TIM9_IRQHandler
+  55 00a8 58010000 		.word _handler // TIM10_IRQHandler
+  56 00ac 58010000 		.word _handler // TIM11_IRQHandler
+  57 00b0 58010000 		.word _handler // TIM2_IRQHandler
+ARM GAS  main.s 			page 2
+
+
+  58 00b4 58010000 		.word _handler // TIM3_IRQHandler
+  59 00b8 58010000 		.word _handler // TIM4_IRQHandler
+  60 00bc 58010000 		.word _handler // I2C1_EV_IRQHandler
+  61 00c0 58010000 		.word _handler // I2C1_ER_IRQHandler
+  62 00c4 58010000 		.word _handler // I2C2_EV_IRQHandler
+  63 00c8 58010000 		.word _handler // I2C2_ER_IRQHandler
+  64 00cc 58010000 		.word _handler // SPI1_IRQHandler
+  65 00d0 58010000 		.word _handler // SPI2_IRQHandler
+  66 00d4 58010000 		.word _handler // USART1_IRQHandler
+  67 00d8 58010000 		.word _handler // USART2_IRQHandler
+  68 00dc 58010000 		.word _handler // USART3_IRQHandler
+  69 00e0 58010000 		.word _handler // EXTI15_10_IRQHandler
+  70 00e4 58010000 		.word _handler // RTC_Alarm_IRQHandler
+  71 00e8 58010000 		.word _handler // USB_FS_WKUP_IRQHandler
+  72 00ec 58010000 		.word _handler // TIM6_IRQHandler
+  73 00f0 58010000 		.word _handler // TIM7_IRQHandler
+  74 00f4 58010000 		.word _handler // SDIO_IRQHandler
+  75 00f8 58010000 		.word _handler // TIM5_IRQHandler
+  76 00fc 58010000 		.word _handler // SPI3_IRQHandler
+  77 0100 58010000 		.word _handler // UART4_IRQHandler
+  78 0104 58010000 		.word _handler // UART5_IRQHandler
+  79 0108 58010000 		.word _handler // DMA2_Channel1_IRQHandler
+  80 010c 58010000 		.word _handler // DMA2_Channel2_IRQHandler
+  81 0110 58010000 		.word _handler // DMA2_Channel3_IRQHandler
+  82 0114 58010000 		.word _handler // DMA2_Channel4_IRQHandler
+  83 0118 58010000 		.word _handler // DMA2_Channel5_IRQHandler
+  84 011c 58010000 		.word _handler // AES_IRQHandler
+  85 0120 58010000 		.word _handler // COMP_ACQ_IRQHandler
+  86 0124 58010000 		.word _handler // 0
+  87 0128 58010000 		.word _handler // 0
+  88 012c 58010000 		.word _handler // 0
+  89 0130 58010000 		.word _handler // 0
+  90 0134 58010000 		.word _handler // 0
+  91 0138 5FF808F1 		.word BootRAM
+  92              	
+  93              	.global start
+  94              	.type start, %function
+  95              	start:
+  96 013c 4DF804BD 	        str     fp, [sp, #-4]!
+  97 0140 0DF1000B 	        add     fp, sp, #0
+  98 0144 A1B0     	        sub     sp, sp, #132
+  99 0146 4FF00003 	        mov     r3, #0
+ 100 014a 0BF8053C 	        strb    r3, [fp, #-5]
+ 101              	loop:
+ 102              		// SYS_WRITE0 (msg)
+ 103 014e 4FF00400 		mov r0,0x04
+ 104 0152 0549     		ldr %r1,=msgloop
+ 105 0154 ABBE     		bkpt 0xab
+ 106              	
+ 107 0156 FAE7     		b loop
+ 108              	
+ 109              	_handler:
+ 110 0158 00BF     		nop
+ 111 015a FDE7     		b _handler
+ 112              	
+ 113              	msgloop:
+ 114 015c 55415541 		.ascii "UAUA1234\n\0"	
+ARM GAS  main.s 			page 3
+
+
+ 114      31323334 
+ 114      0A000000 
+ 114      5C010000 
+ARM GAS  main.s 			page 4
+
+
+DEFINED SYMBOLS
+              main.s:5      *ABS*:0000000020002000 STACKINIT
+              main.s:10     .text:0000000000000000 isr_vectors
+              main.s:11     *ABS*:00000000f108f85f BootRAM
+              main.s:95     .text:000000000000013c start
+              main.s:109    .text:0000000000000158 _handler
+                            .text:0000000000000000 $d
+              main.s:96     .text:000000000000013c $t
+              main.s:101    .text:000000000000014e loop
+              main.s:113    .text:000000000000015c msgloop
+              main.s:114    .text:000000000000015c $d
+              main.s:114    .text:0000000000000168 $d
+
+NO UNDEFINED SYMBOLS

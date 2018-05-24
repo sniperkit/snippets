@@ -1,0 +1,176 @@
+# Copyright 2017 The Go Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style
+# license that can be found in the LICENSE file.
+FROM golang:1.8
+LABEL maintainer "golang-dev@googlegroups.com"
+
+# BEGIN deps (run `make update-deps` to update)
+
+# Repo cloud.google.com/go at 2d3a665 (2017-11-01)
+ENV REV=2d3a6656c17a60b0815b7e06ab0be04eacb6e613
+RUN go get -d cloud.google.com/go/compute/metadata `#and 6 other pkgs` &&\
+    (cd /go/src/cloud.google.com/go && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
+
+# Repo github.com/golang/protobuf at 1e59b77 (2017-11-13)
+ENV REV=1e59b77b52bf8e4b449a57e6f79f21226d571845
+RUN go get -d github.com/golang/protobuf/proto `#and 6 other pkgs` &&\
+    (cd /go/src/github.com/golang/protobuf && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
+
+# Repo github.com/google/go-github at a89ea1c (2017-11-25)
+ENV REV=a89ea1cdf79929726a9416663609269ada774da0
+RUN go get -d github.com/google/go-github/github &&\
+    (cd /go/src/github.com/google/go-github && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
+
+# Repo github.com/google/go-querystring at 53e6ce1 (2017-01-11)
+ENV REV=53e6ce116135b80d037921a7fdd5138cf32d7a8a
+RUN go get -d github.com/google/go-querystring/query &&\
+    (cd /go/src/github.com/google/go-querystring && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
+
+# Repo github.com/googleapis/gax-go at 317e000 (2017-09-15)
+ENV REV=317e0006254c44a0ac427cc52a0e083ff0b9622f
+RUN go get -d github.com/googleapis/gax-go &&\
+    (cd /go/src/github.com/googleapis/gax-go && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
+
+# Repo github.com/gregjones/httpcache at 2bcd89a (2017-11-19)
+ENV REV=2bcd89a1743fd4b373f7370ce8ddc14dfbd18229
+RUN go get -d github.com/gregjones/httpcache &&\
+    (cd /go/src/github.com/gregjones/httpcache && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
+
+# Repo go4.org at 034d17a (2017-05-25)
+ENV REV=034d17a462f7b2dcd1a4a73553ec5357ff6e6c6e
+RUN go get -d go4.org/types &&\
+    (cd /go/src/go4.org && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
+
+# Repo golang.org/x/crypto at 94eea52 (2017-11-28)
+ENV REV=94eea52f7b742c7cbe0b03b22f0c4c8631ece122
+RUN go get -d golang.org/x/crypto/acme `#and 2 other pkgs` &&\
+    (cd /go/src/golang.org/x/crypto && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
+
+# Repo golang.org/x/net at 6921abc (2017-11-28)
+ENV REV=6921abc35dffd00438a0c020584ce560108737ea
+RUN go get -d golang.org/x/net/context `#and 8 other pkgs` &&\
+    (cd /go/src/golang.org/x/net && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
+
+# Repo golang.org/x/oauth2 at f95fa95 (2017-11-17)
+ENV REV=f95fa95eaa936d9d87489b15d1d18b97c1ba9c28
+RUN go get -d golang.org/x/oauth2 `#and 5 other pkgs` &&\
+    (cd /go/src/golang.org/x/oauth2 && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
+
+# Repo golang.org/x/sync at fd80eb9 (2017-11-01)
+ENV REV=fd80eb99c8f653c847d294a001bdf2a3a6f768f5
+RUN go get -d golang.org/x/sync/errgroup &&\
+    (cd /go/src/golang.org/x/sync && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
+
+# Repo golang.org/x/text at 572a2b1 (2017-11-28)
+ENV REV=572a2b141f625f4360cf42a41a43622067e0510b
+RUN go get -d golang.org/x/text/secure/bidirule `#and 4 other pkgs` &&\
+    (cd /go/src/golang.org/x/text && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
+
+# Repo google.golang.org/api at b804618 (2017-11-25)
+ENV REV=b804618854e387dc7fdd9e50496183ddcbb4b120
+RUN go get -d google.golang.org/api/gensupport `#and 9 other pkgs` &&\
+    (cd /go/src/google.golang.org/api && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
+
+# Repo google.golang.org/genproto at 7f0da29 (2017-11-23)
+ENV REV=7f0da29060c682909f650ad8ed4e515bd74fa12a
+RUN go get -d google.golang.org/genproto/googleapis/api/annotations `#and 3 other pkgs` &&\
+    (cd /go/src/google.golang.org/genproto && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
+
+# Repo google.golang.org/grpc at 1e1a47f (2017-11-28)
+ENV REV=1e1a47f0f28f70686674869a7dee0f1096d86919
+RUN go get -d google.golang.org/grpc `#and 22 other pkgs` &&\
+    (cd /go/src/google.golang.org/grpc && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
+
+# Repo grpc.go4.org at 11d0a25 (2017-06-09)
+ENV REV=11d0a25b491971beb5a4625ea7856a3c4afaafa5
+RUN go get -d grpc.go4.org `#and 11 other pkgs` &&\
+    (cd /go/src/grpc.go4.org && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
+
+# Optimization to speed up iterative development, not necessary for correctness:
+RUN go install cloud.google.com/go/compute/metadata \
+	cloud.google.com/go/iam \
+	cloud.google.com/go/internal \
+	cloud.google.com/go/internal/optional \
+	cloud.google.com/go/internal/version \
+	cloud.google.com/go/storage \
+	github.com/golang/protobuf/proto \
+	github.com/golang/protobuf/protoc-gen-go/descriptor \
+	github.com/golang/protobuf/ptypes \
+	github.com/golang/protobuf/ptypes/any \
+	github.com/golang/protobuf/ptypes/duration \
+	github.com/golang/protobuf/ptypes/timestamp \
+	github.com/google/go-github/github \
+	github.com/google/go-querystring/query \
+	github.com/googleapis/gax-go \
+	github.com/gregjones/httpcache \
+	go4.org/types \
+	golang.org/x/crypto/acme \
+	golang.org/x/crypto/acme/autocert \
+	golang.org/x/net/context \
+	golang.org/x/net/context/ctxhttp \
+	golang.org/x/net/http2 \
+	golang.org/x/net/http2/hpack \
+	golang.org/x/net/idna \
+	golang.org/x/net/internal/timeseries \
+	golang.org/x/net/lex/httplex \
+	golang.org/x/net/trace \
+	golang.org/x/oauth2 \
+	golang.org/x/oauth2/google \
+	golang.org/x/oauth2/internal \
+	golang.org/x/oauth2/jws \
+	golang.org/x/oauth2/jwt \
+	golang.org/x/sync/errgroup \
+	golang.org/x/text/secure/bidirule \
+	golang.org/x/text/transform \
+	golang.org/x/text/unicode/bidi \
+	golang.org/x/text/unicode/norm \
+	google.golang.org/api/gensupport \
+	google.golang.org/api/googleapi \
+	google.golang.org/api/googleapi/internal/uritemplates \
+	google.golang.org/api/googleapi/transport \
+	google.golang.org/api/internal \
+	google.golang.org/api/iterator \
+	google.golang.org/api/option \
+	google.golang.org/api/storage/v1 \
+	google.golang.org/api/transport/http \
+	google.golang.org/genproto/googleapis/api/annotations \
+	google.golang.org/genproto/googleapis/iam/v1 \
+	google.golang.org/genproto/googleapis/rpc/status \
+	google.golang.org/grpc \
+	google.golang.org/grpc/balancer \
+	google.golang.org/grpc/balancer/roundrobin \
+	google.golang.org/grpc/codes \
+	google.golang.org/grpc/connectivity \
+	google.golang.org/grpc/credentials \
+	google.golang.org/grpc/encoding \
+	google.golang.org/grpc/grpclb/grpc_lb_v1/messages \
+	google.golang.org/grpc/grpclog \
+	google.golang.org/grpc/internal \
+	google.golang.org/grpc/keepalive \
+	google.golang.org/grpc/metadata \
+	google.golang.org/grpc/naming \
+	google.golang.org/grpc/peer \
+	google.golang.org/grpc/resolver \
+	google.golang.org/grpc/resolver/dns \
+	google.golang.org/grpc/resolver/manual \
+	google.golang.org/grpc/resolver/passthrough \
+	google.golang.org/grpc/stats \
+	google.golang.org/grpc/status \
+	google.golang.org/grpc/tap \
+	google.golang.org/grpc/transport \
+	grpc.go4.org \
+	grpc.go4.org/codes \
+	grpc.go4.org/credentials \
+	grpc.go4.org/grpclog \
+	grpc.go4.org/internal \
+	grpc.go4.org/metadata \
+	grpc.go4.org/naming \
+	grpc.go4.org/peer \
+	grpc.go4.org/stats \
+	grpc.go4.org/tap \
+	grpc.go4.org/transport
+# END deps
+
+COPY . /go/src/golang.org/x/build/
+
+RUN go install -ldflags "-linkmode=external -extldflags '-static -pthread'" golang.org/x/build/maintner/maintnerd

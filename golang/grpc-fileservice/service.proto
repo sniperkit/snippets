@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package fileservice;
+
+message Empty {
+}
+
+message Chunk {
+	string hash  = 1;
+	string filename  = 2;
+	bytes data = 3;
+}
+
+message DownloadRequest {
+	string hash = 2;
+}
+
+service File {
+	rpc Upload(stream Chunk) returns (Empty);
+	rpc Download(DownloadRequest) returns (stream Chunk);
+}

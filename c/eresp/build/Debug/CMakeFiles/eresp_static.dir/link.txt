@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc liberesp_static.a  CMakeFiles/eresp_static.dir/src/eresp.c.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib liberesp_static.a

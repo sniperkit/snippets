@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../../src/eresp.h
+stdlib.h
+-
+stdint.h
+-
+stdbool.h
+-
+
+/Users/jerry/src/github.com/xor-gate/c-by-example/eresp/examples/simple.c
+eresp.h
+-
+stdio.h
+-
+string.h
+-
+inttypes.h
+-
+
+/Users/jerry/src/github.com/xor-gate/c-by-example/eresp/src/eresp.c
+eresp.h
+-
+string.h
+-
+

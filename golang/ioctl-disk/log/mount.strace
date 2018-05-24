@@ -1,0 +1,199 @@
+execve("/usr/bin/mount", ["mount"], [/* 17 vars */]) = 0
+brk(0)                                  = 0xae1000
+fcntl(0, F_GETFD)                       = 0
+fcntl(1, F_GETFD)                       = 0
+fcntl(2, F_GETFD)                       = 0
+access("/etc/suid-debug", F_OK)         = -1 ENOENT (No such file or directory)
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=104414, ...}) = 0
+mmap(NULL, 104414, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f34fccf1000
+close(3)                                = 0
+open("/usr/lib/libmount.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\200\267\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=292488, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f34fccf0000
+mmap(NULL, 2391648, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f34fc8a2000
+mprotect(0x7f34fc8e8000, 2093056, PROT_NONE) = 0
+mmap(0x7f34fcae7000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x45000) = 0x7f34fcae7000
+mmap(0x7f34fcae9000, 3680, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f34fcae9000
+close(3)                                = 0
+open("/usr/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000\7\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1991416, ...}) = 0
+mmap(NULL, 3815984, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f34fc4fe000
+mprotect(0x7f34fc699000, 2093056, PROT_NONE) = 0
+mmap(0x7f34fc898000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19a000) = 0x7f34fc898000
+mmap(0x7f34fc89e000, 14896, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f34fc89e000
+close(3)                                = 0
+open("/usr/lib/libblkid.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000\214\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=266984, ...}) = 0
+mmap(NULL, 2366152, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f34fc2bc000
+mprotect(0x7f34fc2f9000, 2093056, PROT_NONE) = 0
+mmap(0x7f34fc4f8000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3c000) = 0x7f34fc4f8000
+mmap(0x7f34fc4fd000, 2760, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f34fc4fd000
+close(3)                                = 0
+open("/usr/lib/libuuid.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000\26\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=19024, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f34fccef000
+mmap(NULL, 2113952, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f34fc0b7000
+mprotect(0x7f34fc0bb000, 2093056, PROT_NONE) = 0
+mmap(0x7f34fc2ba000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7f34fc2ba000
+close(3)                                = 0
+open("/usr/lib/librt.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\240!\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=31672, ...}) = 0
+mmap(NULL, 2128856, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f34fbeaf000
+mprotect(0x7f34fbeb6000, 2093056, PROT_NONE) = 0
+mmap(0x7f34fc0b5000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6000) = 0x7f34fc0b5000
+close(3)                                = 0
+open("/usr/lib/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0@a\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=146608, ...}) = 0
+mmap(NULL, 2213008, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f34fbc92000
+mprotect(0x7f34fbcaa000, 2093056, PROT_NONE) = 0
+mmap(0x7f34fbea9000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x17000) = 0x7f34fbea9000
+mmap(0x7f34fbeab000, 13456, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f34fbeab000
+close(3)                                = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f34fccee000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f34fcced000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f34fcceb000
+arch_prctl(ARCH_SET_FS, 0x7f34fcceb780) = 0
+mprotect(0x7f34fc898000, 16384, PROT_READ) = 0
+mprotect(0x7f34fbea9000, 4096, PROT_READ) = 0
+mprotect(0x7f34fc0b5000, 4096, PROT_READ) = 0
+mprotect(0x7f34fc2ba000, 4096, PROT_READ) = 0
+mprotect(0x7f34fc4f8000, 16384, PROT_READ) = 0
+mprotect(0x7f34fcae7000, 4096, PROT_READ) = 0
+mprotect(0x608000, 4096, PROT_READ)     = 0
+mprotect(0x7f34fcd0b000, 4096, PROT_READ) = 0
+munmap(0x7f34fccf1000, 104414)          = 0
+set_tid_address(0x7f34fcceba50)         = 3336
+set_robust_list(0x7f34fcceba60, 24)     = 0
+rt_sigaction(SIGRTMIN, {0x7f34fbc97be0, [], SA_RESTORER|SA_SIGINFO, 0x7f34fbca2d60}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {0x7f34fbc97c70, [], SA_RESTORER|SA_RESTART|SA_SIGINFO, 0x7f34fbca2d60}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+getrlimit(RLIMIT_STACK, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+brk(0)                                  = 0xae1000
+brk(0xb02000)                           = 0xb02000
+open("/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=1629600, ...}) = 0
+mmap(NULL, 1629600, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f34fcb5d000
+close(3)                                = 0
+getuid()                                = 1000
+geteuid()                               = 1000
+getuid()                                = 1000
+getuid()                                = 1000
+stat("/run", {st_mode=S_IFDIR|0755, st_size=760, ...}) = 0
+open("/proc/self/mountinfo", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f34fcd0a000
+read(3, "16 20 0:4 / /proc rw,nosuid,node"..., 1024) = 1024
+lstat("/proc", {st_mode=S_IFDIR|0555, st_size=0, ...}) = 0
+lstat("/proc/self", {st_mode=S_IFLNK|0777, st_size=0, ...}) = 0
+readlink("/proc/self", "3336", 4095)    = 4
+lstat("/proc/3336", {st_mode=S_IFDIR|0555, st_size=0, ...}) = 0
+lstat("/proc/3336/mountinfo", {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+read(3, "red:10 - pstore pstore rw\n27 24 "..., 1024) = 1024
+read(3, ",relatime shared:21 - hugetlbfs "..., 1024) = 1024
+read(3, "trfs /dev/sdf rw,space_cache,sub"..., 1024) = 349
+read(3, "", 1024)                       = 0
+close(3)                                = 0
+munmap(0x7f34fcd0a000, 4096)            = 0
+getuid()                                = 1000
+stat("/run", {st_mode=S_IFDIR|0755, st_size=760, ...}) = 0
+stat("/run/mount/utab", {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 8), ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f34fcd0a000
+write(1, "proc on /proc type proc (rw,nosu"..., 75) = 75
+write(1, "sys on /sys type sysfs (rw,nosui"..., 57) = 57
+write(1, "dev on /dev type devtmpfs (rw,no"..., 88) = 88
+write(1, "run on /run type tmpfs (rw,nosui"..., 59) = 59
+lstat("/dev", {st_mode=S_IFDIR|0755, st_size=3380, ...}) = 0
+lstat("/dev/sdd1", {st_mode=S_IFBLK|0660, st_rdev=makedev(8, 49), ...}) = 0
+write(1, "/dev/sdd1 on / type btrfs (rw,no"..., 75) = 75
+write(1, "securityfs on /sys/kernel/securi"..., 85) = 85
+write(1, "tmpfs on /dev/shm type tmpfs (rw"..., 47) = 47
+write(1, "devpts on /dev/pts type devpts ("..., 87) = 87
+write(1, "tmpfs on /sys/fs/cgroup type tmp"..., 69) = 69
+write(1, "cgroup on /sys/fs/cgroup/systemd"..., 151) = 151
+write(1, "pstore on /sys/fs/pstore type ps"..., 71) = 71
+write(1, "cgroup on /sys/fs/cgroup/blkio t"..., 83) = 83
+write(1, "cgroup on /sys/fs/cgroup/freezer"..., 87) = 87
+write(1, "cgroup on /sys/fs/cgroup/cpu,cpu"..., 95) = 95
+write(1, "cgroup on /sys/fs/cgroup/devices"..., 87) = 87
+write(1, "cgroup on /sys/fs/cgroup/cpuset "..., 85) = 85
+write(1, "cgroup on /sys/fs/cgroup/memory "..., 85) = 85
+write(1, "cgroup on /sys/fs/cgroup/net_cls"..., 87) = 87
+write(1, "cgroup on /sys/fs/cgroup/pids ty"..., 81) = 81
+write(1, "systemd-1 on /proc/sys/fs/binfmt"..., 116) = 116
+write(1, "hugetlbfs on /dev/hugepages type"..., 57) = 57
+write(1, "mqueue on /dev/mqueue type mqueu"..., 48) = 48
+write(1, "debugfs on /sys/kernel/debug typ"..., 56) = 56
+write(1, "nfsd on /proc/fs/nfsd type nfsd "..., 46) = 46
+write(1, "configfs on /sys/kernel/config t"..., 59) = 59
+write(1, "tmpfs on /var/tmp type tmpfs (rw"..., 63) = 63
+write(1, "tmpfs on /tmp type tmpfs (rw,nos"..., 52) = 52
+lstat("/dev", {st_mode=S_IFDIR|0755, st_size=3380, ...}) = 0
+lstat("/dev/sdd3", {st_mode=S_IFBLK|0660, st_rdev=makedev(8, 51), ...}) = 0
+write(1, "/dev/sdd3 on /var/lib/machines t"..., 91) = 91
+lstat("/dev", {st_mode=S_IFDIR|0755, st_size=3380, ...}) = 0
+lstat("/dev/sdd2", {st_mode=S_IFBLK|0660, st_rdev=makedev(8, 50), ...}) = 0
+write(1, "/dev/sdd2 on /var/lib/docker typ"..., 89) = 89
+lstat("/dev", {st_mode=S_IFDIR|0755, st_size=3380, ...}) = 0
+lstat("/dev/mapper", {st_mode=S_IFDIR|0755, st_size=120, ...}) = 0
+lstat("/dev/mapper/data-files", {st_mode=S_IFLNK|0777, st_size=7, ...}) = 0
+readlink("/dev/mapper/data-files", "../dm-0", 4095) = 7
+lstat("/dev/dm-0", {st_mode=S_IFBLK|0660, st_rdev=makedev(254, 0), ...}) = 0
+stat("/dev/dm-0", {st_mode=S_IFBLK|0660, st_rdev=makedev(254, 0), ...}) = 0
+open("/sys/block/dm-0/dm/name", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f34fcd09000
+read(3, "data-files\n", 4096)           = 11
+access("/dev/mapper/data-files", F_OK)  = 0
+close(3)                                = 0
+munmap(0x7f34fcd09000, 4096)            = 0
+write(1, "/dev/mapper/data-files on /data/"..., 75) = 75
+lstat("/dev", {st_mode=S_IFDIR|0755, st_size=3380, ...}) = 0
+lstat("/dev/mapper", {st_mode=S_IFDIR|0755, st_size=120, ...}) = 0
+lstat("/dev/mapper/data-files", {st_mode=S_IFLNK|0777, st_size=7, ...}) = 0
+readlink("/dev/mapper/data-files", "../dm-0", 4095) = 7
+lstat("/dev/dm-0", {st_mode=S_IFBLK|0660, st_rdev=makedev(254, 0), ...}) = 0
+stat("/dev/dm-0", {st_mode=S_IFBLK|0660, st_rdev=makedev(254, 0), ...}) = 0
+open("/sys/block/dm-0/dm/name", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f34fcd09000
+read(3, "data-files\n", 4096)           = 11
+access("/dev/mapper/data-files", F_OK)  = 0
+close(3)                                = 0
+munmap(0x7f34fcd09000, 4096)            = 0
+write(1, "/dev/mapper/data-files on /data/"..., 73) = 73
+lstat("/dev", {st_mode=S_IFDIR|0755, st_size=3380, ...}) = 0
+lstat("/dev/mapper", {st_mode=S_IFDIR|0755, st_size=120, ...}) = 0
+lstat("/dev/mapper/red01-leech", {st_mode=S_IFLNK|0777, st_size=7, ...}) = 0
+readlink("/dev/mapper/red01-leech", "../dm-1", 4095) = 7
+lstat("/dev/dm-1", {st_mode=S_IFBLK|0660, st_rdev=makedev(254, 1), ...}) = 0
+stat("/dev/dm-1", {st_mode=S_IFBLK|0660, st_rdev=makedev(254, 1), ...}) = 0
+open("/sys/block/dm-1/dm/name", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f34fcd09000
+read(3, "red01-leech\n", 4096)          = 12
+access("/dev/mapper/red01-leech", F_OK) = 0
+close(3)                                = 0
+munmap(0x7f34fcd09000, 4096)            = 0
+write(1, "/dev/mapper/red01-leech on /data"..., 76) = 76
+lstat("/dev", {st_mode=S_IFDIR|0755, st_size=3380, ...}) = 0
+lstat("/dev/sdf", {st_mode=S_IFBLK|0660, st_rdev=makedev(8, 80), ...}) = 0
+write(1, "/dev/sdf on /data/usb0 type btrf"..., 79) = 79
+lstat("/dev", {st_mode=S_IFDIR|0755, st_size=3380, ...}) = 0
+lstat("/dev/sde", {st_mode=S_IFBLK|0660, st_rdev=makedev(8, 64), ...}) = 0
+write(1, "/dev/sde on /data/red type btrfs"..., 78) = 78
+write(1, "sunrpc on /var/lib/nfs/rpc_pipef"..., 64) = 64
+write(1, "tmpfs on /run/user/1000 type tmp"..., 103) = 103
+close(1)                                = 0
+munmap(0x7f34fcd0a000, 4096)            = 0
+close(2)                                = 0
+exit_group(0)                           = ?
++++ exited with 0 +++

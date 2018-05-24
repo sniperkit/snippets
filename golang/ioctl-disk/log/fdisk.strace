@@ -1,0 +1,735 @@
+execve("/usr/bin/fdisk", ["fdisk", "-l"], [/* 17 vars */]) = 0
+brk(0)                                  = 0x10ec000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=104414, ...}) = 0
+mmap(NULL, 104414, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f01dc849000
+close(3)                                = 0
+open("/usr/lib/libfdisk.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\300\270\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=360328, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc848000
+mmap(NULL, 2459488, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f01dc3e9000
+mprotect(0x7f01dc43d000, 2093056, PROT_NONE) = 0
+mmap(0x7f01dc63c000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x53000) = 0x7f01dc63c000
+mmap(0x7f01dc641000, 1888, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f01dc641000
+close(3)                                = 0
+open("/usr/lib/libsmartcols.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0`^\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=143272, ...}) = 0
+mmap(NULL, 2242432, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f01dc1c5000
+mprotect(0x7f01dc1e7000, 2093056, PROT_NONE) = 0
+mmap(0x7f01dc3e6000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x21000) = 0x7f01dc3e6000
+mmap(0x7f01dc3e8000, 1920, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f01dc3e8000
+close(3)                                = 0
+open("/usr/lib/libreadline.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260e\1\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0555, st_size=345576, ...}) = 0
+mmap(NULL, 2397440, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f01dbf7b000
+mprotect(0x7f01dbfbc000, 2093056, PROT_NONE) = 0
+mmap(0x7f01dc1bb000, 32768, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x40000) = 0x7f01dc1bb000
+mmap(0x7f01dc1c3000, 5376, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f01dc1c3000
+close(3)                                = 0
+open("/usr/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000\7\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1991416, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc847000
+mmap(NULL, 3815984, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f01dbbd7000
+mprotect(0x7f01dbd72000, 2093056, PROT_NONE) = 0
+mmap(0x7f01dbf71000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19a000) = 0x7f01dbf71000
+mmap(0x7f01dbf77000, 14896, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f01dbf77000
+close(3)                                = 0
+open("/usr/lib/libblkid.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000\214\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=266984, ...}) = 0
+mmap(NULL, 2366152, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f01db995000
+mprotect(0x7f01db9d2000, 2093056, PROT_NONE) = 0
+mmap(0x7f01dbbd1000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3c000) = 0x7f01dbbd1000
+mmap(0x7f01dbbd6000, 2760, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f01dbbd6000
+close(3)                                = 0
+open("/usr/lib/libuuid.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000\26\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=19024, ...}) = 0
+mmap(NULL, 2113952, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f01db790000
+mprotect(0x7f01db794000, 2093056, PROT_NONE) = 0
+mmap(0x7f01db993000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7f01db993000
+close(3)                                = 0
+open("/usr/lib/libncursesw.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260u\1\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=444680, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc846000
+mmap(NULL, 2542224, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f01db523000
+mprotect(0x7f01db58a000, 2097152, PROT_NONE) = 0
+mmap(0x7f01db78a000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x67000) = 0x7f01db78a000
+close(3)                                = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc845000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc843000
+arch_prctl(ARCH_SET_FS, 0x7f01dc843780) = 0
+mprotect(0x7f01dbf71000, 16384, PROT_READ) = 0
+mprotect(0x7f01db78a000, 16384, PROT_READ) = 0
+mprotect(0x7f01db993000, 4096, PROT_READ) = 0
+mprotect(0x7f01dbbd1000, 16384, PROT_READ) = 0
+mprotect(0x7f01dc1bb000, 8192, PROT_READ) = 0
+mprotect(0x7f01dc3e6000, 4096, PROT_READ) = 0
+mprotect(0x7f01dc63c000, 8192, PROT_READ) = 0
+mprotect(0x618000, 4096, PROT_READ)     = 0
+mprotect(0x7f01dc863000, 4096, PROT_READ) = 0
+munmap(0x7f01dc849000, 104414)          = 0
+brk(0)                                  = 0x10ec000
+brk(0x110d000)                          = 0x110d000
+open("/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=1629600, ...}) = 0
+mmap(NULL, 1629600, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f01dc6b5000
+close(3)                                = 0
+ioctl(1, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+stat("/root/.config/terminal-colors.d", 0x7ffeb95f1980) = -1 ENOENT (No such file or directory)
+stat("/etc/terminal-colors.d", 0x7ffeb95f1980) = -1 ENOENT (No such file or directory)
+open("/proc/partitions", O_RDONLY)      = 3
+fstat(3, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc862000
+read(3, "major minor  #blocks  name\n\n   8"..., 1024) = 532
+open("/sys/block/sda/dev", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc861000
+read(4, "8:0\n", 4096)                  = 4
+close(4)                                = 0
+munmap(0x7f01dc861000, 4096)            = 0
+open("/sys/dev/block/8:0", O_RDONLY|O_CLOEXEC) = 4
+openat(4, "dm/uuid", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+close(4)                                = 0
+open("/sys/dev/block/8:0", O_RDONLY|O_CLOEXEC) = 4
+newfstatat(4, "partition", 0x7ffeb95f1880, 0) = -1 ENOENT (No such file or directory)
+openat(4, "dm/uuid", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+close(4)                                = 0
+open("/sys/dev/block/8:0", O_RDONLY|O_CLOEXEC) = 4
+readlink("/sys/dev/block/8:0", "../../devices/pci0000:00/0000:00"..., 4095) = 78
+close(4)                                = 0
+stat("/dev/sda", {st_mode=S_IFBLK|0660, st_rdev=makedev(8, 0), ...}) = 0
+lstat("/dev", {st_mode=S_IFDIR|0755, st_size=3380, ...}) = 0
+lstat("/dev/sda", {st_mode=S_IFBLK|0660, st_rdev=makedev(8, 0), ...}) = 0
+open("/dev/sda", O_RDONLY)              = 4
+ioctl(4, CDROM_GET_CAPABILITY, 0)       = -1 ENOTTY (Inappropriate ioctl for device)
+close(4)                                = 0
+open("/dev/sda", O_RDONLY|O_CLOEXEC)    = 4
+fadvise64(4, 0, 0, POSIX_FADV_RANDOM)   = 0
+fstat(4, {st_mode=S_IFBLK|0660, st_rdev=makedev(8, 0), ...}) = 0
+uname({sysname="Linux", nodename="shulgin.srv.xor-gate.org", ...}) = 0
+ioctl(4, BLKGETSIZE64, 2000398934016)   = 0
+open("/sys/dev/block/8:0", O_RDONLY|O_CLOEXEC) = 5
+openat(5, "dm/uuid", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+close(5)                                = 0
+open("/sys/dev/block/8:0", O_RDONLY|O_CLOEXEC) = 5
+newfstatat(5, "partition", 0x7ffeb95f2780, 0) = -1 ENOENT (No such file or directory)
+openat(5, "dm/uuid", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+close(5)                                = 0
+ioctl(4, CDROM_GET_CAPABILITY, 0)       = -1 ENOTTY (Inappropriate ioctl for device)
+ioctl(4, BLKALIGNOFF, 0)                = 0
+ioctl(4, BLKIOMIN, 4096)                = 0
+ioctl(4, BLKIOOPT, 0)                   = 0
+ioctl(4, BLKPBSZGET, 4096)              = 0
+ioctl(4, BLKSSZGET, 512)                = 0
+ioctl(4, BLKSSZGET, 512)                = 0
+uname({sysname="Linux", nodename="shulgin.srv.xor-gate.org", ...}) = 0
+ioctl(4, BLKGETSIZE64, 2000398934016)   = 0
+ioctl(4, HDIO_GETGEO, {heads=255, sectors=63, cylinders=46593, start=0}) = 0
+lseek(4, 0, SEEK_SET)                   = 0
+read(4, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 512) = 512
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 1), ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc861000
+open("/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = 5
+fstat(5, {st_mode=S_IFREG|0644, st_size=2997, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc860000
+read(5, "# Locale name alias data base.\n#"..., 4096) = 2997
+read(5, "", 4096)                       = 0
+close(5)                                = 0
+munmap(0x7f01dc860000, 4096)            = 0
+open("/usr/share/locale/en_US.UTF-8/LC_MESSAGES/util-linux.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/share/locale/en_US.utf8/LC_MESSAGES/util-linux.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/share/locale/en_US/LC_MESSAGES/util-linux.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/share/locale/en.UTF-8/LC_MESSAGES/util-linux.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/share/locale/en.utf8/LC_MESSAGES/util-linux.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/share/locale/en/LC_MESSAGES/util-linux.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+write(1, "\33[1mDisk /dev/sda: 1.8 TiB, 2000"..., 68) = 68
+write(1, "\33[0mUnits: sectors of 1 * 512 = "..., 42) = 42
+write(1, "Sector size (logical/physical): "..., 55) = 55
+write(1, "I/O size (minimum/optimal): 4096"..., 52) = 52
+write(1, "Disklabel type: dos\n", 20)   = 20
+write(1, "Disk identifier: 0xce72723e\n", 28) = 28
+write(1, "\n", 1)                       = 1
+ioctl(1, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+ioctl(0, TIOCGWINSZ, {ws_row=25, ws_col=212, ws_xpixel=0, ws_ypixel=0}) = 0
+open("/usr/lib/gconv/gconv-modules.cache", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/lib/gconv/gconv-modules", O_RDONLY|O_CLOEXEC) = 5
+fstat(5, {st_mode=S_IFREG|0644, st_size=56095, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc860000
+read(5, "# GNU libc iconv configuration.\n"..., 4096) = 4096
+read(5, "1002//\tJUS_I.B1.002//\nmodule\tJUS"..., 4096) = 4096
+read(5, "ISO-IR-110//\t\tISO-8859-4//\nalias"..., 4096) = 4096
+read(5, "\t\tISO-8859-14//\nalias\tISO_8859-1"..., 4096) = 4096
+read(5, "IC-ES//\nalias\tEBCDICES//\t\tEBCDIC"..., 4096) = 4096
+read(5, "DIC-CP-ES//\t\tIBM284//\nalias\tCSIB"..., 4096) = 4096
+read(5, "//\nalias\tCSIBM864//\t\tIBM864//\nal"..., 4096) = 4096
+read(5, "BM939//\nmodule\tIBM939//\t\tINTERNA"..., 4096) = 4096
+read(5, "EUC-CN//\nalias\tCN-GB//\t\t\tEUC-CN/"..., 4096) = 4096
+read(5, "T//\nmodule\tISO-2022-CN-EXT//\tINT"..., 4096) = 4096
+brk(0x112e000)                          = 0x112e000
+read(5, "//\t\tISO_5428//\nalias\tISO_5428:19"..., 4096) = 4096
+read(5, "CII-8\t1\n\n#\tfrom\t\t\tto\t\t\tmodule\t\tc"..., 4096) = 4096
+read(5, "\tfrom\t\t\tto\t\t\tmodule\t\tcost\nalias\t"..., 4096) = 4096
+read(5, "712//\t\tINTERNAL\t\tIBM12712\t\t1\nmod"..., 4096) = 2847
+read(5, "", 4096)                       = 0
+close(5)                                = 0
+munmap(0x7f01dc860000, 4096)            = 0
+write(1, "\33[1mDevice\33[0m     \33[1mBoot\33[0m "..., 122) = 122
+write(1, "/dev/sda1        2048 3907029167"..., 63) = 63
+close(4)                                = 0
+open("/sys/block/sda1/dev", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/sys/block/sdd/dev", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc860000
+read(4, "8:48\n", 4096)                 = 5
+close(4)                                = 0
+munmap(0x7f01dc860000, 4096)            = 0
+open("/sys/dev/block/8:48", O_RDONLY|O_CLOEXEC) = 4
+openat(4, "dm/uuid", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+close(4)                                = 0
+open("/sys/dev/block/8:48", O_RDONLY|O_CLOEXEC) = 4
+newfstatat(4, "partition", 0x7ffeb95f1880, 0) = -1 ENOENT (No such file or directory)
+openat(4, "dm/uuid", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+close(4)                                = 0
+open("/sys/dev/block/8:48", O_RDONLY|O_CLOEXEC) = 4
+readlink("/sys/dev/block/8:48", "../../devices/pci0000:00/0000:00"..., 4095) = 78
+close(4)                                = 0
+stat("/dev/sdd", {st_mode=S_IFBLK|0660, st_rdev=makedev(8, 48), ...}) = 0
+lstat("/dev", {st_mode=S_IFDIR|0755, st_size=3380, ...}) = 0
+lstat("/dev/sdd", {st_mode=S_IFBLK|0660, st_rdev=makedev(8, 48), ...}) = 0
+open("/dev/sdd", O_RDONLY)              = 4
+ioctl(4, CDROM_GET_CAPABILITY, 0)       = -1 ENOTTY (Inappropriate ioctl for device)
+close(4)                                = 0
+write(1, "\n\n", 2)                     = 2
+open("/dev/sdd", O_RDONLY|O_CLOEXEC)    = 4
+fadvise64(4, 0, 0, POSIX_FADV_RANDOM)   = 0
+fstat(4, {st_mode=S_IFBLK|0660, st_rdev=makedev(8, 48), ...}) = 0
+ioctl(4, BLKGETSIZE64, 120034123776)    = 0
+open("/sys/dev/block/8:48", O_RDONLY|O_CLOEXEC) = 5
+openat(5, "dm/uuid", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+close(5)                                = 0
+open("/sys/dev/block/8:48", O_RDONLY|O_CLOEXEC) = 5
+newfstatat(5, "partition", 0x7ffeb95f2780, 0) = -1 ENOENT (No such file or directory)
+openat(5, "dm/uuid", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+close(5)                                = 0
+ioctl(4, CDROM_GET_CAPABILITY, 0)       = -1 ENOTTY (Inappropriate ioctl for device)
+ioctl(4, BLKALIGNOFF, 0)                = 0
+ioctl(4, BLKIOMIN, 512)                 = 0
+ioctl(4, BLKIOOPT, 0)                   = 0
+ioctl(4, BLKPBSZGET, 512)               = 0
+ioctl(4, BLKSSZGET, 512)                = 0
+ioctl(4, BLKSSZGET, 512)                = 0
+ioctl(4, BLKGETSIZE64, 120034123776)    = 0
+ioctl(4, HDIO_GETGEO, {heads=255, sectors=63, cylinders=14593, start=0}) = 0
+lseek(4, 0, SEEK_SET)                   = 0
+read(4, "\353c\220\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 512) = 512
+lseek(4, 51540656128, SEEK_SET)         = 51540656128
+read(4, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 512) = 512
+lseek(4, 55836672000, SEEK_SET)         = 55836672000
+read(4, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 512) = 512
+lseek(4, 73017589760, SEEK_SET)         = 73017589760
+read(4, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 512) = 512
+write(1, "\33[1mDisk /dev/sdd: 111.8 GiB, 12"..., 68) = 68
+write(1, "\33[0mUnits: sectors of 1 * 512 = "..., 42) = 42
+write(1, "Sector size (logical/physical): "..., 54) = 54
+write(1, "I/O size (minimum/optimal): 512 "..., 50) = 50
+write(1, "Disklabel type: dos\n", 20)   = 20
+write(1, "Disk identifier: 0xd97b83ec\n", 28) = 28
+write(1, "\n", 1)                       = 1
+ioctl(1, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+ioctl(0, TIOCGWINSZ, {ws_row=25, ws_col=212, ws_xpixel=0, ws_ypixel=0}) = 0
+write(1, "\33[1mDevice\33[0m     \33[1mBoot\33[0m "..., 124) = 124
+write(1, "/dev/sdd1            2048  33556"..., 61) = 61
+write(1, "/dev/sdd2        33556480  67110"..., 61) = 61
+write(1, "/dev/sdd3        67110912 100665"..., 61) = 61
+write(1, "/dev/sdd4       100665344 234441"..., 64) = 64
+write(1, "/dev/sdd5       100667392 109055"..., 61) = 61
+write(1, "/dev/sdd6       109058048 142612"..., 61) = 61
+write(1, "/dev/sdd7       142614528 176168"..., 61) = 61
+close(4)                                = 0
+open("/sys/block/sdd1/dev", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/sys/block/sdd2/dev", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/sys/block/sdd3/dev", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/sys/block/sdd5/dev", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/sys/block/sdd6/dev", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/sys/block/sdd7/dev", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/sys/block/sdb/dev", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc860000
+read(4, "8:16\n", 4096)                 = 5
+close(4)                                = 0
+munmap(0x7f01dc860000, 4096)            = 0
+open("/sys/dev/block/8:16", O_RDONLY|O_CLOEXEC) = 4
+openat(4, "dm/uuid", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+close(4)                                = 0
+open("/sys/dev/block/8:16", O_RDONLY|O_CLOEXEC) = 4
+newfstatat(4, "partition", 0x7ffeb95f1880, 0) = -1 ENOENT (No such file or directory)
+openat(4, "dm/uuid", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+close(4)                                = 0
+open("/sys/dev/block/8:16", O_RDONLY|O_CLOEXEC) = 4
+readlink("/sys/dev/block/8:16", "../../devices/pci0000:00/0000:00"..., 4095) = 78
+close(4)                                = 0
+stat("/dev/sdb", {st_mode=S_IFBLK|0660, st_rdev=makedev(8, 16), ...}) = 0
+lstat("/dev", {st_mode=S_IFDIR|0755, st_size=3380, ...}) = 0
+lstat("/dev/sdb", {st_mode=S_IFBLK|0660, st_rdev=makedev(8, 16), ...}) = 0
+open("/dev/sdb", O_RDONLY)              = 4
+ioctl(4, CDROM_GET_CAPABILITY, 0)       = -1 ENOTTY (Inappropriate ioctl for device)
+close(4)                                = 0
+write(1, "\n\n", 2)                     = 2
+open("/dev/sdb", O_RDONLY|O_CLOEXEC)    = 4
+fadvise64(4, 0, 0, POSIX_FADV_RANDOM)   = 0
+fstat(4, {st_mode=S_IFBLK|0660, st_rdev=makedev(8, 16), ...}) = 0
+ioctl(4, BLKGETSIZE64, 500106780160)    = 0
+open("/sys/dev/block/8:16", O_RDONLY|O_CLOEXEC) = 5
+openat(5, "dm/uuid", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+close(5)                                = 0
+open("/sys/dev/block/8:16", O_RDONLY|O_CLOEXEC) = 5
+newfstatat(5, "partition", 0x7ffeb95f2780, 0) = -1 ENOENT (No such file or directory)
+openat(5, "dm/uuid", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+close(5)                                = 0
+ioctl(4, CDROM_GET_CAPABILITY, 0)       = -1 ENOTTY (Inappropriate ioctl for device)
+ioctl(4, BLKALIGNOFF, 0)                = 0
+ioctl(4, BLKIOMIN, 512)                 = 0
+ioctl(4, BLKIOOPT, 0)                   = 0
+ioctl(4, BLKPBSZGET, 512)               = 0
+ioctl(4, BLKSSZGET, 512)                = 0
+ioctl(4, BLKSSZGET, 512)                = 0
+ioctl(4, BLKGETSIZE64, 500106780160)    = 0
+ioctl(4, HDIO_GETGEO, {heads=255, sectors=63, cylinders=60801, start=0}) = 0
+lseek(4, 0, SEEK_SET)                   = 0
+read(4, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 512) = 512
+lseek(4, 0, SEEK_SET)                   = 0
+read(4, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 8192) = 8192
+write(1, "\33[1mDisk /dev/sdb: 465.8 GiB, 50"..., 68) = 68
+write(1, "\33[0mUnits: sectors of 1 * 512 = "..., 42) = 42
+write(1, "Sector size (logical/physical): "..., 54) = 54
+write(1, "I/O size (minimum/optimal): 512 "..., 50) = 50
+close(4)                                = 0
+open("/sys/block/sdc/dev", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc860000
+read(4, "8:32\n", 4096)                 = 5
+close(4)                                = 0
+munmap(0x7f01dc860000, 4096)            = 0
+open("/sys/dev/block/8:32", O_RDONLY|O_CLOEXEC) = 4
+openat(4, "dm/uuid", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+close(4)                                = 0
+open("/sys/dev/block/8:32", O_RDONLY|O_CLOEXEC) = 4
+newfstatat(4, "partition", 0x7ffeb95f1880, 0) = -1 ENOENT (No such file or directory)
+openat(4, "dm/uuid", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+close(4)                                = 0
+open("/sys/dev/block/8:32", O_RDONLY|O_CLOEXEC) = 4
+readlink("/sys/dev/block/8:32", "../../devices/pci0000:00/0000:00"..., 4095) = 78
+close(4)                                = 0
+stat("/dev/sdc", {st_mode=S_IFBLK|0660, st_rdev=makedev(8, 32), ...}) = 0
+lstat("/dev", {st_mode=S_IFDIR|0755, st_size=3380, ...}) = 0
+lstat("/dev/sdc", {st_mode=S_IFBLK|0660, st_rdev=makedev(8, 32), ...}) = 0
+open("/dev/sdc", O_RDONLY)              = 4
+ioctl(4, CDROM_GET_CAPABILITY, 0)       = -1 ENOTTY (Inappropriate ioctl for device)
+close(4)                                = 0
+write(1, "\n\n", 2)                     = 2
+open("/dev/sdc", O_RDONLY|O_CLOEXEC)    = 4
+fadvise64(4, 0, 0, POSIX_FADV_RANDOM)   = 0
+fstat(4, {st_mode=S_IFBLK|0660, st_rdev=makedev(8, 32), ...}) = 0
+ioctl(4, BLKGETSIZE64, 1500301910016)   = 0
+open("/sys/dev/block/8:32", O_RDONLY|O_CLOEXEC) = 5
+openat(5, "dm/uuid", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+close(5)                                = 0
+open("/sys/dev/block/8:32", O_RDONLY|O_CLOEXEC) = 5
+newfstatat(5, "partition", 0x7ffeb95f2780, 0) = -1 ENOENT (No such file or directory)
+openat(5, "dm/uuid", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+close(5)                                = 0
+ioctl(4, CDROM_GET_CAPABILITY, 0)       = -1 ENOTTY (Inappropriate ioctl for device)
+ioctl(4, BLKALIGNOFF, 0)                = 0
+ioctl(4, BLKIOMIN, 512)                 = 0
+ioctl(4, BLKIOOPT, 0)                   = 0
+ioctl(4, BLKPBSZGET, 512)               = 0
+ioctl(4, BLKSSZGET, 512)                = 0
+ioctl(4, BLKSSZGET, 512)                = 0
+ioctl(4, BLKGETSIZE64, 1500301910016)   = 0
+ioctl(4, HDIO_GETGEO, {heads=255, sectors=63, cylinders=51329, start=0}) = 0
+lseek(4, 0, SEEK_SET)                   = 0
+read(4, "9\304\263\244\265\263\344\257\nX:h\365y\254\255\356\312\261\204W\4\34\363\272\260\336\220\236Z\352*"..., 512) = 512
+write(1, "\33[1mDisk /dev/sdc: 1.4 TiB, 1500"..., 68) = 68
+write(1, "\33[0mUnits: sectors of 1 * 512 = "..., 42) = 42
+write(1, "Sector size (logical/physical): "..., 54) = 54
+write(1, "I/O size (minimum/optimal): 512 "..., 50) = 50
+write(1, "Disklabel type: dos\n", 20)   = 20
+write(1, "Disk identifier: 0xa75601dd\n", 28) = 28
+write(1, "\n", 1)                       = 1
+ioctl(1, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+ioctl(0, TIOCGWINSZ, {ws_row=25, ws_col=212, ws_xpixel=0, ws_ypixel=0}) = 0
+write(1, "\33[1mDevice\33[0m     \33[1mBoot\33[0m "..., 122) = 122
+write(1, "/dev/sdc1  *       63 2930277167"..., 63) = 63
+close(4)                                = 0
+open("/sys/block/sdc1/dev", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/sys/block/sde/dev", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc860000
+read(4, "8:64\n", 4096)                 = 5
+close(4)                                = 0
+munmap(0x7f01dc860000, 4096)            = 0
+open("/sys/dev/block/8:64", O_RDONLY|O_CLOEXEC) = 4
+openat(4, "dm/uuid", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+close(4)                                = 0
+open("/sys/dev/block/8:64", O_RDONLY|O_CLOEXEC) = 4
+newfstatat(4, "partition", 0x7ffeb95f1880, 0) = -1 ENOENT (No such file or directory)
+openat(4, "dm/uuid", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+close(4)                                = 0
+open("/sys/dev/block/8:64", O_RDONLY|O_CLOEXEC) = 4
+readlink("/sys/dev/block/8:64", "../../devices/pci0000:00/0000:00"..., 4095) = 78
+close(4)                                = 0
+stat("/dev/sde", {st_mode=S_IFBLK|0660, st_rdev=makedev(8, 64), ...}) = 0
+lstat("/dev", {st_mode=S_IFDIR|0755, st_size=3380, ...}) = 0
+lstat("/dev/sde", {st_mode=S_IFBLK|0660, st_rdev=makedev(8, 64), ...}) = 0
+open("/dev/sde", O_RDONLY)              = 4
+ioctl(4, CDROM_GET_CAPABILITY, 0)       = -1 ENOTTY (Inappropriate ioctl for device)
+close(4)                                = 0
+write(1, "\n\n", 2)                     = 2
+open("/dev/sde", O_RDONLY|O_CLOEXEC)    = 4
+fadvise64(4, 0, 0, POSIX_FADV_RANDOM)   = 0
+fstat(4, {st_mode=S_IFBLK|0660, st_rdev=makedev(8, 64), ...}) = 0
+ioctl(4, BLKGETSIZE64, 2000398934016)   = 0
+open("/sys/dev/block/8:64", O_RDONLY|O_CLOEXEC) = 5
+openat(5, "dm/uuid", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+close(5)                                = 0
+open("/sys/dev/block/8:64", O_RDONLY|O_CLOEXEC) = 5
+newfstatat(5, "partition", 0x7ffeb95f2780, 0) = -1 ENOENT (No such file or directory)
+openat(5, "dm/uuid", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+close(5)                                = 0
+ioctl(4, CDROM_GET_CAPABILITY, 0)       = -1 ENOTTY (Inappropriate ioctl for device)
+ioctl(4, BLKALIGNOFF, 0)                = 0
+ioctl(4, BLKIOMIN, 4096)                = 0
+ioctl(4, BLKIOOPT, 0)                   = 0
+ioctl(4, BLKPBSZGET, 4096)              = 0
+ioctl(4, BLKSSZGET, 512)                = 0
+ioctl(4, BLKSSZGET, 512)                = 0
+ioctl(4, BLKGETSIZE64, 2000398934016)   = 0
+ioctl(4, HDIO_GETGEO, {heads=255, sectors=63, cylinders=46593, start=0}) = 0
+lseek(4, 0, SEEK_SET)                   = 0
+read(4, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 512) = 512
+lseek(4, 0, SEEK_SET)                   = 0
+read(4, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 8192) = 8192
+write(1, "\33[1mDisk /dev/sde: 1.8 TiB, 2000"..., 68) = 68
+write(1, "\33[0mUnits: sectors of 1 * 512 = "..., 42) = 42
+write(1, "Sector size (logical/physical): "..., 55) = 55
+write(1, "I/O size (minimum/optimal): 4096"..., 52) = 52
+close(4)                                = 0
+open("/sys/block/dm-0/dev", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc860000
+read(4, "254:0\n", 4096)                = 6
+close(4)                                = 0
+munmap(0x7f01dc860000, 4096)            = 0
+open("/sys/dev/block/254:0", O_RDONLY|O_CLOEXEC) = 4
+openat(4, "dm/uuid", O_RDONLY|O_CLOEXEC) = 5
+fcntl(5, F_GETFL)                       = 0x8000 (flags O_RDONLY|O_LARGEFILE)
+fstat(5, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc860000
+read(5, "LVM-fIeGwhF9z11RJLF23VzcR2ncTMmF"..., 4096) = 69
+close(5)                                = 0
+munmap(0x7f01dc860000, 4096)            = 0
+close(4)                                = 0
+open("/sys/dev/block/254:0", O_RDONLY|O_CLOEXEC) = 4
+newfstatat(4, "partition", 0x7ffeb95f1880, 0) = -1 ENOENT (No such file or directory)
+openat(4, "dm/uuid", O_RDONLY|O_CLOEXEC) = 5
+fcntl(5, F_GETFL)                       = 0x8000 (flags O_RDONLY|O_LARGEFILE)
+fstat(5, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc860000
+read(5, "LVM-fIeGwhF9z11RJLF23VzcR2ncTMmF"..., 4096) = 69
+close(5)                                = 0
+munmap(0x7f01dc860000, 4096)            = 0
+close(4)                                = 0
+open("/sys/dev/block/254:0", O_RDONLY|O_CLOEXEC) = 4
+readlink("/sys/dev/block/254:0", "../../devices/virtual/block/dm-0", 4095) = 32
+close(4)                                = 0
+stat("/dev/dm-0", {st_mode=S_IFBLK|0660, st_rdev=makedev(254, 0), ...}) = 0
+lstat("/dev", {st_mode=S_IFDIR|0755, st_size=3380, ...}) = 0
+lstat("/dev/dm-0", {st_mode=S_IFBLK|0660, st_rdev=makedev(254, 0), ...}) = 0
+stat("/dev/dm-0", {st_mode=S_IFBLK|0660, st_rdev=makedev(254, 0), ...}) = 0
+open("/sys/block/dm-0/dm/name", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc860000
+read(4, "data-files\n", 4096)           = 11
+access("/dev/mapper/data-files", F_OK)  = 0
+close(4)                                = 0
+munmap(0x7f01dc860000, 4096)            = 0
+open("/dev/mapper/data-files", O_RDONLY) = 4
+ioctl(4, CDROM_GET_CAPABILITY, 0)       = -1 ENOTTY (Inappropriate ioctl for device)
+close(4)                                = 0
+write(1, "\n\n", 2)                     = 2
+open("/dev/mapper/data-files", O_RDONLY|O_CLOEXEC) = 4
+fadvise64(4, 0, 0, POSIX_FADV_RANDOM)   = 0
+fstat(4, {st_mode=S_IFBLK|0660, st_rdev=makedev(254, 0), ...}) = 0
+ioctl(4, BLKGETSIZE64, 1495336484864)   = 0
+open("/sys/dev/block/254:0", O_RDONLY|O_CLOEXEC) = 5
+openat(5, "dm/uuid", O_RDONLY|O_CLOEXEC) = 6
+fcntl(6, F_GETFL)                       = 0x8000 (flags O_RDONLY|O_LARGEFILE)
+fstat(6, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc860000
+read(6, "LVM-fIeGwhF9z11RJLF23VzcR2ncTMmF"..., 4096) = 69
+close(6)                                = 0
+munmap(0x7f01dc860000, 4096)            = 0
+close(5)                                = 0
+open("/sys/dev/block/254:0", O_RDONLY|O_CLOEXEC) = 5
+newfstatat(5, "partition", 0x7ffeb95f2780, 0) = -1 ENOENT (No such file or directory)
+openat(5, "dm/uuid", O_RDONLY|O_CLOEXEC) = 6
+fcntl(6, F_GETFL)                       = 0x8000 (flags O_RDONLY|O_LARGEFILE)
+fstat(6, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc860000
+read(6, "LVM-fIeGwhF9z11RJLF23VzcR2ncTMmF"..., 4096) = 69
+close(6)                                = 0
+munmap(0x7f01dc860000, 4096)            = 0
+close(5)                                = 0
+ioctl(4, CDROM_GET_CAPABILITY, 0)       = -1 ENOTTY (Inappropriate ioctl for device)
+ioctl(4, BLKALIGNOFF, 0)                = 0
+ioctl(4, BLKIOMIN, 512)                 = 0
+ioctl(4, BLKIOOPT, 0)                   = 0
+ioctl(4, BLKPBSZGET, 512)               = 0
+ioctl(4, BLKSSZGET, 512)                = 0
+ioctl(4, BLKSSZGET, 512)                = 0
+ioctl(4, BLKGETSIZE64, 1495336484864)   = 0
+ioctl(4, HDIO_GETGEO, {heads=0, sectors=0, cylinders=0, start=0}) = 0
+lseek(4, 0, SEEK_SET)                   = 0
+read(4, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 512) = 512
+lseek(4, 0, SEEK_SET)                   = 0
+read(4, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 8192) = 8192
+write(1, "\33[1mDisk /dev/mapper/data-files:"..., 82) = 82
+write(1, "\33[0mUnits: sectors of 1 * 512 = "..., 42) = 42
+write(1, "Sector size (logical/physical): "..., 54) = 54
+write(1, "I/O size (minimum/optimal): 512 "..., 50) = 50
+close(4)                                = 0
+open("/sys/block/dm-1/dev", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc860000
+read(4, "254:1\n", 4096)                = 6
+close(4)                                = 0
+munmap(0x7f01dc860000, 4096)            = 0
+open("/sys/dev/block/254:1", O_RDONLY|O_CLOEXEC) = 4
+openat(4, "dm/uuid", O_RDONLY|O_CLOEXEC) = 5
+fcntl(5, F_GETFL)                       = 0x8000 (flags O_RDONLY|O_LARGEFILE)
+fstat(5, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc860000
+read(5, "LVM-QOy8AWQgPGMHWW7YZqYPfmUo7i96"..., 4096) = 69
+close(5)                                = 0
+munmap(0x7f01dc860000, 4096)            = 0
+close(4)                                = 0
+open("/sys/dev/block/254:1", O_RDONLY|O_CLOEXEC) = 4
+newfstatat(4, "partition", 0x7ffeb95f1880, 0) = -1 ENOENT (No such file or directory)
+openat(4, "dm/uuid", O_RDONLY|O_CLOEXEC) = 5
+fcntl(5, F_GETFL)                       = 0x8000 (flags O_RDONLY|O_LARGEFILE)
+fstat(5, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc860000
+read(5, "LVM-QOy8AWQgPGMHWW7YZqYPfmUo7i96"..., 4096) = 69
+close(5)                                = 0
+munmap(0x7f01dc860000, 4096)            = 0
+close(4)                                = 0
+open("/sys/dev/block/254:1", O_RDONLY|O_CLOEXEC) = 4
+readlink("/sys/dev/block/254:1", "../../devices/virtual/block/dm-1", 4095) = 32
+close(4)                                = 0
+stat("/dev/dm-1", {st_mode=S_IFBLK|0660, st_rdev=makedev(254, 1), ...}) = 0
+lstat("/dev", {st_mode=S_IFDIR|0755, st_size=3380, ...}) = 0
+lstat("/dev/dm-1", {st_mode=S_IFBLK|0660, st_rdev=makedev(254, 1), ...}) = 0
+stat("/dev/dm-1", {st_mode=S_IFBLK|0660, st_rdev=makedev(254, 1), ...}) = 0
+open("/sys/block/dm-1/dm/name", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc860000
+read(4, "red01-leech\n", 4096)          = 12
+access("/dev/mapper/red01-leech", F_OK) = 0
+close(4)                                = 0
+munmap(0x7f01dc860000, 4096)            = 0
+open("/dev/mapper/red01-leech", O_RDONLY) = 4
+ioctl(4, CDROM_GET_CAPABILITY, 0)       = -1 ENOTTY (Inappropriate ioctl for device)
+close(4)                                = 0
+write(1, "\n\n", 2)                     = 2
+open("/dev/mapper/red01-leech", O_RDONLY|O_CLOEXEC) = 4
+fadvise64(4, 0, 0, POSIX_FADV_RANDOM)   = 0
+fstat(4, {st_mode=S_IFBLK|0660, st_rdev=makedev(254, 1), ...}) = 0
+ioctl(4, BLKGETSIZE64, 900881973248)    = 0
+open("/sys/dev/block/254:1", O_RDONLY|O_CLOEXEC) = 5
+openat(5, "dm/uuid", O_RDONLY|O_CLOEXEC) = 6
+fcntl(6, F_GETFL)                       = 0x8000 (flags O_RDONLY|O_LARGEFILE)
+fstat(6, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc860000
+read(6, "LVM-QOy8AWQgPGMHWW7YZqYPfmUo7i96"..., 4096) = 69
+close(6)                                = 0
+munmap(0x7f01dc860000, 4096)            = 0
+close(5)                                = 0
+open("/sys/dev/block/254:1", O_RDONLY|O_CLOEXEC) = 5
+newfstatat(5, "partition", 0x7ffeb95f2780, 0) = -1 ENOENT (No such file or directory)
+openat(5, "dm/uuid", O_RDONLY|O_CLOEXEC) = 6
+fcntl(6, F_GETFL)                       = 0x8000 (flags O_RDONLY|O_LARGEFILE)
+fstat(6, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc860000
+read(6, "LVM-QOy8AWQgPGMHWW7YZqYPfmUo7i96"..., 4096) = 69
+close(6)                                = 0
+munmap(0x7f01dc860000, 4096)            = 0
+close(5)                                = 0
+ioctl(4, CDROM_GET_CAPABILITY, 0)       = -1 ENOTTY (Inappropriate ioctl for device)
+ioctl(4, BLKALIGNOFF, 0)                = 0
+ioctl(4, BLKIOMIN, 4096)                = 0
+ioctl(4, BLKIOOPT, 0)                   = 0
+ioctl(4, BLKPBSZGET, 4096)              = 0
+ioctl(4, BLKSSZGET, 512)                = 0
+ioctl(4, BLKSSZGET, 512)                = 0
+ioctl(4, BLKGETSIZE64, 900881973248)    = 0
+ioctl(4, HDIO_GETGEO, {heads=0, sectors=0, cylinders=0, start=0}) = 0
+lseek(4, 0, SEEK_SET)                   = 0
+read(4, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 512) = 512
+lseek(4, 0, SEEK_SET)                   = 0
+read(4, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 8192) = 8192
+write(1, "\33[1mDisk /dev/mapper/red01-leech"..., 82) = 82
+write(1, "\33[0mUnits: sectors of 1 * 512 = "..., 42) = 42
+write(1, "Sector size (logical/physical): "..., 55) = 55
+write(1, "I/O size (minimum/optimal): 4096"..., 52) = 52
+close(4)                                = 0
+open("/sys/block/dm-2/dev", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc860000
+read(4, "254:2\n", 4096)                = 6
+close(4)                                = 0
+munmap(0x7f01dc860000, 4096)            = 0
+open("/sys/dev/block/254:2", O_RDONLY|O_CLOEXEC) = 4
+openat(4, "dm/uuid", O_RDONLY|O_CLOEXEC) = 5
+fcntl(5, F_GETFL)                       = 0x8000 (flags O_RDONLY|O_LARGEFILE)
+fstat(5, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc860000
+read(5, "LVM-QOy8AWQgPGMHWW7YZqYPfmUo7i96"..., 4096) = 69
+close(5)                                = 0
+munmap(0x7f01dc860000, 4096)            = 0
+close(4)                                = 0
+open("/sys/dev/block/254:2", O_RDONLY|O_CLOEXEC) = 4
+newfstatat(4, "partition", 0x7ffeb95f1880, 0) = -1 ENOENT (No such file or directory)
+openat(4, "dm/uuid", O_RDONLY|O_CLOEXEC) = 5
+fcntl(5, F_GETFL)                       = 0x8000 (flags O_RDONLY|O_LARGEFILE)
+fstat(5, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc860000
+read(5, "LVM-QOy8AWQgPGMHWW7YZqYPfmUo7i96"..., 4096) = 69
+close(5)                                = 0
+munmap(0x7f01dc860000, 4096)            = 0
+close(4)                                = 0
+open("/sys/dev/block/254:2", O_RDONLY|O_CLOEXEC) = 4
+readlink("/sys/dev/block/254:2", "../../devices/virtual/block/dm-2", 4095) = 32
+close(4)                                = 0
+stat("/dev/dm-2", {st_mode=S_IFBLK|0660, st_rdev=makedev(254, 2), ...}) = 0
+lstat("/dev", {st_mode=S_IFDIR|0755, st_size=3380, ...}) = 0
+lstat("/dev/dm-2", {st_mode=S_IFBLK|0660, st_rdev=makedev(254, 2), ...}) = 0
+stat("/dev/dm-2", {st_mode=S_IFBLK|0660, st_rdev=makedev(254, 2), ...}) = 0
+open("/sys/block/dm-2/dm/name", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc860000
+read(4, "red01-files\n", 4096)          = 12
+access("/dev/mapper/red01-files", F_OK) = 0
+close(4)                                = 0
+munmap(0x7f01dc860000, 4096)            = 0
+open("/dev/mapper/red01-files", O_RDONLY) = 4
+ioctl(4, CDROM_GET_CAPABILITY, 0)       = -1 ENOTTY (Inappropriate ioctl for device)
+close(4)                                = 0
+write(1, "\n\n", 2)                     = 2
+open("/dev/mapper/red01-files", O_RDONLY|O_CLOEXEC) = 4
+fadvise64(4, 0, 0, POSIX_FADV_RANDOM)   = 0
+fstat(4, {st_mode=S_IFBLK|0660, st_rdev=makedev(254, 2), ...}) = 0
+ioctl(4, BLKGETSIZE64, 1099511627776)   = 0
+open("/sys/dev/block/254:2", O_RDONLY|O_CLOEXEC) = 5
+openat(5, "dm/uuid", O_RDONLY|O_CLOEXEC) = 6
+fcntl(6, F_GETFL)                       = 0x8000 (flags O_RDONLY|O_LARGEFILE)
+fstat(6, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc860000
+read(6, "LVM-QOy8AWQgPGMHWW7YZqYPfmUo7i96"..., 4096) = 69
+close(6)                                = 0
+munmap(0x7f01dc860000, 4096)            = 0
+close(5)                                = 0
+open("/sys/dev/block/254:2", O_RDONLY|O_CLOEXEC) = 5
+newfstatat(5, "partition", 0x7ffeb95f2780, 0) = -1 ENOENT (No such file or directory)
+openat(5, "dm/uuid", O_RDONLY|O_CLOEXEC) = 6
+fcntl(6, F_GETFL)                       = 0x8000 (flags O_RDONLY|O_LARGEFILE)
+fstat(6, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc860000
+read(6, "LVM-QOy8AWQgPGMHWW7YZqYPfmUo7i96"..., 4096) = 69
+close(6)                                = 0
+munmap(0x7f01dc860000, 4096)            = 0
+close(5)                                = 0
+ioctl(4, CDROM_GET_CAPABILITY, 0)       = -1 ENOTTY (Inappropriate ioctl for device)
+ioctl(4, BLKALIGNOFF, 0)                = 0
+ioctl(4, BLKIOMIN, 4096)                = 0
+ioctl(4, BLKIOOPT, 0)                   = 0
+ioctl(4, BLKPBSZGET, 4096)              = 0
+ioctl(4, BLKSSZGET, 512)                = 0
+ioctl(4, BLKSSZGET, 512)                = 0
+ioctl(4, BLKGETSIZE64, 1099511627776)   = 0
+ioctl(4, HDIO_GETGEO, {heads=0, sectors=0, cylinders=0, start=0}) = 0
+lseek(4, 0, SEEK_SET)                   = 0
+read(4, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 512) = 512
+lseek(4, 0, SEEK_SET)                   = 0
+read(4, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 8192) = 8192
+write(1, "\33[1mDisk /dev/mapper/red01-files"..., 81) = 81
+write(1, "\33[0mUnits: sectors of 1 * 512 = "..., 42) = 42
+write(1, "Sector size (logical/physical): "..., 55) = 55
+write(1, "I/O size (minimum/optimal): 4096"..., 52) = 52
+close(4)                                = 0
+open("/sys/block/sdf/dev", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f01dc860000
+read(4, "8:80\n", 4096)                 = 5
+close(4)                                = 0
+munmap(0x7f01dc860000, 4096)            = 0
+open("/sys/dev/block/8:80", O_RDONLY|O_CLOEXEC) = 4
+openat(4, "dm/uuid", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+close(4)                                = 0
+open("/sys/dev/block/8:80", O_RDONLY|O_CLOEXEC) = 4
+newfstatat(4, "partition", 0x7ffeb95f1880, 0) = -1 ENOENT (No such file or directory)
+openat(4, "dm/uuid", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+close(4)                                = 0
+open("/sys/dev/block/8:80", O_RDONLY|O_CLOEXEC) = 4
+readlink("/sys/dev/block/8:80", "../../devices/pci0000:00/0000:00"..., 4095) = 108
+close(4)                                = 0
+stat("/dev/sdf", {st_mode=S_IFBLK|0660, st_rdev=makedev(8, 80), ...}) = 0
+lstat("/dev", {st_mode=S_IFDIR|0755, st_size=3380, ...}) = 0
+lstat("/dev/sdf", {st_mode=S_IFBLK|0660, st_rdev=makedev(8, 80), ...}) = 0
+open("/dev/sdf", O_RDONLY)              = 4
+ioctl(4, CDROM_GET_CAPABILITY, 0)       = -1 EINVAL (Invalid argument)
+close(4)                                = 0
+write(1, "\n\n", 2)                     = 2
+open("/dev/sdf", O_RDONLY|O_CLOEXEC)    = 4
+fadvise64(4, 0, 0, POSIX_FADV_RANDOM)   = 0
+fstat(4, {st_mode=S_IFBLK|0660, st_rdev=makedev(8, 80), ...}) = 0
+ioctl(4, BLKGETSIZE64, 31610958848)     = 0
+open("/sys/dev/block/8:80", O_RDONLY|O_CLOEXEC) = 5
+openat(5, "dm/uuid", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+close(5)                                = 0
+open("/sys/dev/block/8:80", O_RDONLY|O_CLOEXEC) = 5
+newfstatat(5, "partition", 0x7ffeb95f2780, 0) = -1 ENOENT (No such file or directory)
+openat(5, "dm/uuid", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+close(5)                                = 0
+ioctl(4, CDROM_GET_CAPABILITY, 0)       = -1 EINVAL (Invalid argument)
+ioctl(4, BLKALIGNOFF, 0)                = 0
+ioctl(4, BLKIOMIN, 512)                 = 0
+ioctl(4, BLKIOOPT, 0)                   = 0
+ioctl(4, BLKPBSZGET, 512)               = 0
+ioctl(4, BLKSSZGET, 512)                = 0
+ioctl(4, BLKSSZGET, 512)                = 0
+ioctl(4, BLKGETSIZE64, 31610958848)     = 0
+ioctl(4, HDIO_GETGEO, {heads=64, sectors=32, cylinders=30146, start=0}) = 0
+lseek(4, 0, SEEK_SET)                   = 0
+read(4, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 512) = 512
+lseek(4, 0, SEEK_SET)                   = 0
+read(4, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 8192) = 8192
+write(1, "\33[1mDisk /dev/sdf: 29.5 GiB, 316"..., 65) = 65
+write(1, "\33[0mUnits: sectors of 1 * 512 = "..., 42) = 42
+write(1, "Sector size (logical/physical): "..., 54) = 54
+write(1, "I/O size (minimum/optimal): 512 "..., 50) = 50
+close(4)                                = 0
+read(3, "", 1024)                       = 0
+close(3)                                = 0
+munmap(0x7f01dc862000, 4096)            = 0
+close(1)                                = 0
+munmap(0x7f01dc861000, 4096)            = 0
+close(2)                                = 0
+exit_group(0)                           = ?
++++ exited with 0 +++

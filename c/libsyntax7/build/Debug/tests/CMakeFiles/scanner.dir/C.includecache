@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../../include/s7.h
+stdlib.h
+-
+stdbool.h
+-
+
+/Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/tests/scanner.c
+s7.h
+-
+stdio.h
+-
+stdlib.h
+-
+stdbool.h
+-
+string.h
+-
+ctype.h
+-
+

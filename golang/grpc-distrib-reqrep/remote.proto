@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package reqrep;
+
+message Request {
+	string device_uid = 1;
+	bytes data = 2;
+}
+
+message Empty {
+}
+
+service Device {
+	rpc Ping(Request) returns (Empty);
+}

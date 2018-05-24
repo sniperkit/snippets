@@ -1,0 +1,74 @@
+syntax = "proto3";
+
+package gogorpc;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+
+message HeaderMsg {
+	uint32 dinetRPC  = 1 [(gogoproto.jsontag) = "dinetrpc", (gogoproto.moretags) = "msg:\"dinetrpc\""];
+	uint64 time      = 2 [(gogoproto.jsontag) = "time",     (gogoproto.moretags) = "msg:\"time\""];
+	string deviceUID = 3 [(gogoproto.jsontag) = "device:uid,omitempty", (gogoproto.moretags) = "msg:\"device:uid\""];
+	uint32 userID    = 4 [(gogoproto.jsontag) = "user:id,omitempty", (gogoproto.moretags) = "msg:\"user:id\""];
+	uint32 projectID = 5 [(gogoproto.jsontag) = "project:id,omitempty", (gogoproto.moretags) = "msg:\"project:id\""];
+}
+
+message Value {
+	oneof value {
+		bool Bool = 1;
+		double Number = 2;
+		string Str = 3;
+	}
+}
+
+enum ClassMethod {
+	UnknownUnknown = 0;
+	DevicePing     = 10;
+	DeviceUserData = 11;
+}
+
+message RequestMsg {
+	HeaderMsg Header = 1 [(gogoproto.embed) = true, (gogoproto.jsontag) = "", (gogoproto.nullable) = false];
+	uint32 ID     = 2 [(gogoproto.jsontag) = "id", (gogoproto.moretags) = "msg:\"id\""];
+	ClassMethod classMethod = 3 [(gogoproto.jsontag) = "req", (gogoproto.moretags) = "msg:\"req\""];
+	map<string, Value> params = 10 [(gogoproto.jsontag) = "params,omitempty", (gogoproto.moretags) = "msg:\"params\""];
+}
+
+message ReplyMsg {
+	HeaderMsg header = 1 [(gogoproto.embed) = true, (gogoproto.jsontag) = "", (gogoproto.nullable) = false];
+	uint32 ID        = 2 [(gogoproto.jsontag) = "id", (gogoproto.moretags) = "msg:\"id\""];
+	ClassMethod classMethod = 3 [(gogoproto.jsontag) = "rep", (gogoproto.moretags) = "msg:\"rep\""];
+	Error error      = 4 [(gogoproto.jsontag) = "error,omitempty", (gogoproto.moretags) = "msg:\"error\""];
+	Result result    = 5 [(gogoproto.jsontag) = "result,omitempty", (gogoproto.moretags) = "msg:\"result\""];
+}
+
+message PublishMsg {
+	HeaderMsg Header = 1 [(gogoproto.embed) = true, (gogoproto.jsontag) = "", (gogoproto.nullable) = false];
+	ClassMethod classMethod = 2 [(gogoproto.jsontag) = "pub", (gogoproto.moretags) = "msg:\"pub\""];
+	Result result = 5 [(gogoproto.embed) = true, (gogoproto.jsontag) = "result,omitempty", (gogoproto.moretags) = "msg:\"result\""];
+}
+
+enum Errno {
+	Ok        = 0;
+	OpNotSupp = 1;
+}
+
+message Error {
+	Errno code = 1 [(gogoproto.jsontag) = "code"];
+	string descr = 2 [(gogoproto.jsontag) = "descr"];
+}
+
+message Result {
+	oneof Result {
+		ResultValueItems ResultValueItems = 1 [(gogoproto.jsontag) = ",omitempty"];
+	}
+}
+
+message ResultValueItems {
+	repeated ResultValueItem Items = 1 [(gogoproto.jsontag) = ",omitempty"];
+}
+
+message ResultValueItem {
+	uint32 uid  = 1 [(gogoproto.jsontag) = "uid"];
+	Value value = 2 [(gogoproto.jsontag) = "value"];
+	uint64 time = 3 [(gogoproto.jsontag) = "time,omitempty"];
+}

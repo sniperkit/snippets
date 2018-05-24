@@ -1,0 +1,215 @@
+ARM GAS  main.s 			page 1
+
+
+   1              	.thumb
+   2              	.syntax unified
+   3              	
+   4              	.equ STACKINIT,0x20002000
+   5              	
+   6              	.section .text
+   7              		.org 0
+   8              	
+   9              	isr_vectors:
+  10 0000 00200020 	  .word  0x20002000
+  11 0004 00000000 	  .word  main
+  12 0008 1C020000 	  .word  _handler // NMI_Handler
+  13 000c 1C020000 	  .word  _handler // HardFault_Handler
+  14 0010 1C020000 	  .word  _handler // MemManage_Handler
+  15 0014 1C020000 	  .word  _handler // BusFault_Handler
+  16 0018 1C020000 	  .word  _handler // UsageFault_Handler
+  17 001c 00000000 	  .word  0
+  18 0020 00000000 	  .word  0
+  19 0024 00000000 	  .word  0
+  20 0028 00000000 	  .word  0
+  21 002c 1C020000 	  .word  _handler // SVC_Handler
+  22 0030 1C020000 	  .word  _handler // DebugMon_Handler
+  23 0034 00000000 	  .word  0
+  24 0038 1C020000 	  .word  _handler // PendSV_Handler
+  25 003c 1C020000 	  .word  _handler // SysTick_Handler
+  26              	  
+  27              	  /* External Interrupts */
+  28 0040 1C020000 	  .word     _handler // WWDG_IRQHandler                   /* Window WatchDog              */
+  29 0044 1C020000 	  .word     _handler // PVD_IRQHandler                    /* PVD through EXTI Line detection */
+  30 0048 1C020000 	  .word _handler //     TAMP_STAMP_IRQHandler             /* Tamper and TimeStamps through the EXTI
+  31 004c 1C020000 	  .word _handler //     RTC_WKUP_IRQHandler               /* RTC Wakeup through the EXTI line */
+  32 0050 1C020000 	  .word _handler //     FLASH_IRQHandler                  /* FLASH                        */
+  33 0054 1C020000 	  .word _handler //     RCC_IRQHandler                    /* RCC                          */
+  34 0058 1C020000 	  .word _handler //     EXTI0_IRQHandler                  /* EXTI Line0                   */
+  35 005c 1C020000 	  .word _handler //     EXTI1_IRQHandler                  /* EXTI Line1                   */
+  36 0060 1C020000 	  .word _handler //     EXTI2_IRQHandler                  /* EXTI Line2                   */
+  37 0064 1C020000 	  .word _handler //     EXTI3_IRQHandler                  /* EXTI Line3                   */
+  38 0068 1C020000 	  .word _handler //     EXTI4_IRQHandler                  /* EXTI Line4                   */
+  39 006c 1C020000 	  .word _handler //     DMA1_Stream0_IRQHandler           /* DMA1 Stream 0                */
+  40 0070 1C020000 	  .word _handler //     DMA1_Stream1_IRQHandler           /* DMA1 Stream 1                */
+  41 0074 1C020000 	  .word _handler //     DMA1_Stream2_IRQHandler           /* DMA1 Stream 2                */
+  42 0078 1C020000 	  .word _handler //     DMA1_Stream3_IRQHandler           /* DMA1 Stream 3                */
+  43 007c 1C020000 	  .word _handler //     DMA1_Stream4_IRQHandler           /* DMA1 Stream 4                */
+  44 0080 1C020000 	  .word _handler //     DMA1_Stream5_IRQHandler           /* DMA1 Stream 5                */
+  45 0084 1C020000 	  .word _handler //     DMA1_Stream6_IRQHandler           /* DMA1 Stream 6                */
+  46 0088 1C020000 	  .word _handler //     ADC_IRQHandler                    /* ADC1, ADC2 and ADC3s         */
+  47 008c 1C020000 	  .word _handler //     CAN1_TX_IRQHandler                /* CAN1 TX                      */
+  48 0090 1C020000 	  .word _handler //     CAN1_RX0_IRQHandler               /* CAN1 RX0                     */
+  49 0094 1C020000 	  .word _handler //     CAN1_RX1_IRQHandler               /* CAN1 RX1                     */
+  50 0098 1C020000 	  .word _handler //     CAN1_SCE_IRQHandler               /* CAN1 SCE                     */
+  51 009c 1C020000 	  .word _handler //     EXTI9_5_IRQHandler                /* External Line[9:5]s          */
+  52 00a0 1C020000 	  .word _handler //     TIM1_BRK_TIM9_IRQHandler          /* TIM1 Break and TIM9          */
+  53 00a4 1C020000 	  .word _handler //     TIM1_UP_TIM10_IRQHandler          /* TIM1 Update and TIM10        */
+  54 00a8 1C020000 	  .word _handler //     TIM1_TRG_COM_TIM11_IRQHandler     /* TIM1 Trigger and Commutation and TIM11
+  55 00ac 1C020000 	  .word _handler //     TIM1_CC_IRQHandler                /* TIM1 Capture Compare         */
+  56 00b0 1C020000 	  .word _handler //     TIM2_IRQHandler                   /* TIM2                         */
+  57 00b4 1C020000 	  .word _handler //     TIM3_IRQHandler                   /* TIM3                         */
+ARM GAS  main.s 			page 2
+
+
+  58 00b8 1C020000 	  .word _handler //     TIM4_IRQHandler                   /* TIM4                         */
+  59 00bc 1C020000 	  .word _handler //     I2C1_EV_IRQHandler                /* I2C1 Event                   */
+  60 00c0 1C020000 	  .word _handler //     I2C1_ER_IRQHandler                /* I2C1 Error                   */
+  61 00c4 1C020000 	  .word _handler //     I2C2_EV_IRQHandler                /* I2C2 Event                   */
+  62 00c8 1C020000 	  .word _handler //     I2C2_ER_IRQHandler                /* I2C2 Error                   */
+  63 00cc 1C020000 	  .word _handler //     SPI1_IRQHandler                   /* SPI1                         */
+  64 00d0 1C020000 	  .word _handler //     SPI2_IRQHandler                   /* SPI2                         */
+  65 00d4 1C020000 	  .word _handler //     USART1_IRQHandler                 /* USART1                       */
+  66 00d8 1C020000 	  .word _handler //     USART2_IRQHandler                 /* USART2                       */
+  67 00dc 1C020000 	  .word _handler //     USART3_IRQHandler                 /* USART3                       */
+  68 00e0 1C020000 	  .word _handler //     EXTI15_10_IRQHandler              /* External Line[15:10]s        */
+  69 00e4 1C020000 	  .word _handler //     RTC_Alarm_IRQHandler              /* RTC Alarm (A and B) through EXTI Line 
+  70 00e8 1C020000 	  .word _handler //     OTG_FS_WKUP_IRQHandler            /* USB OTG FS Wakeup through EXTI line */
+  71 00ec 1C020000 	  .word _handler //     TIM8_BRK_TIM12_IRQHandler         /* TIM8 Break and TIM12         */
+  72 00f0 1C020000 	  .word _handler //     TIM8_UP_TIM13_IRQHandler          /* TIM8 Update and TIM13        */
+  73 00f4 1C020000 	  .word _handler //     TIM8_TRG_COM_TIM14_IRQHandler     /* TIM8 Trigger and Commutation and TIM14
+  74 00f8 1C020000 	  .word _handler //     TIM8_CC_IRQHandler                /* TIM8 Capture Compare         */
+  75 00fc 1C020000 	  .word _handler //     DMA1_Stream7_IRQHandler           /* DMA1 Stream7                 */
+  76 0100 1C020000 	  .word _handler //     FMC_IRQHandler                    /* FMC                          */
+  77 0104 1C020000 	  .word _handler //     SDMMC1_IRQHandler                 /* SDMMC1                       */
+  78 0108 1C020000 	  .word _handler //     TIM5_IRQHandler                   /* TIM5                         */
+  79 010c 1C020000 	  .word _handler //     SPI3_IRQHandler                   /* SPI3                         */
+  80 0110 1C020000 	  .word _handler //     UART4_IRQHandler                  /* UART4                        */
+  81 0114 1C020000 	  .word _handler //     UART5_IRQHandler                  /* UART5                        */
+  82 0118 1C020000 	  .word _handler //     TIM6_DAC_IRQHandler               /* TIM6 and DAC1&2 underrun errors */
+  83 011c 1C020000 	  .word _handler //     TIM7_IRQHandler                   /* TIM7                         */
+  84 0120 1C020000 	  .word _handler //     DMA2_Stream0_IRQHandler           /* DMA2 Stream 0                */
+  85 0124 1C020000 	  .word _handler //     DMA2_Stream1_IRQHandler           /* DMA2 Stream 1                */
+  86 0128 1C020000 	  .word _handler //     DMA2_Stream2_IRQHandler           /* DMA2 Stream 2                */
+  87 012c 1C020000 	  .word _handler //     DMA2_Stream3_IRQHandler           /* DMA2 Stream 3                */
+  88 0130 1C020000 	  .word _handler //     DMA2_Stream4_IRQHandler           /* DMA2 Stream 4                */
+  89 0134 1C020000 	  .word _handler //     ETH_IRQHandler                    /* Ethernet                     */
+  90 0138 1C020000 	  .word _handler //     ETH_WKUP_IRQHandler               /* Ethernet Wakeup through EXTI line */
+  91 013c 1C020000 	  .word _handler //     CAN2_TX_IRQHandler                /* CAN2 TX                      */
+  92 0140 1C020000 	  .word _handler //     CAN2_RX0_IRQHandler               /* CAN2 RX0                     */
+  93 0144 1C020000 	  .word _handler //     CAN2_RX1_IRQHandler               /* CAN2 RX1                     */
+  94 0148 1C020000 	  .word _handler //     CAN2_SCE_IRQHandler               /* CAN2 SCE                     */
+  95 014c 1C020000 	  .word _handler //     OTG_FS_IRQHandler                 /* USB OTG FS                   */
+  96 0150 1C020000 	  .word _handler //     DMA2_Stream5_IRQHandler           /* DMA2 Stream 5                */
+  97 0154 1C020000 	  .word _handler //     DMA2_Stream6_IRQHandler           /* DMA2 Stream 6                */
+  98 0158 1C020000 	  .word _handler //     DMA2_Stream7_IRQHandler           /* DMA2 Stream 7                */
+  99 015c 1C020000 	  .word _handler //     USART6_IRQHandler                 /* USART6                       */
+ 100 0160 1C020000 	  .word _handler //     I2C3_EV_IRQHandler                /* I2C3 event                   */
+ 101 0164 1C020000 	  .word _handler //     I2C3_ER_IRQHandler                /* I2C3 error                   */
+ 102 0168 1C020000 	  .word _handler //     OTG_HS_EP1_OUT_IRQHandler         /* USB OTG HS End Point 1 Out   */
+ 103 016c 1C020000 	  .word _handler //     OTG_HS_EP1_IN_IRQHandler          /* USB OTG HS End Point 1 In    */
+ 104 0170 1C020000 	  .word _handler //     OTG_HS_WKUP_IRQHandler            /* USB OTG HS Wakeup through EXTI */
+ 105 0174 1C020000 	  .word _handler //     OTG_HS_IRQHandler                 /* USB OTG HS                   */
+ 106 0178 1C020000 	  .word _handler //     DCMI_IRQHandler                   /* DCMI                         */
+ 107 017c 1C020000 	  .word _handler //     0                                 /* Reserved                     */
+ 108 0180 1C020000 	  .word _handler //     RNG_IRQHandler                    /* RNG                          */
+ 109 0184 1C020000 	  .word _handler //     FPU_IRQHandler                    /* FPU                          */
+ 110 0188 1C020000 	  .word _handler //     UART7_IRQHandler                  /* UART7                        */
+ 111 018c 1C020000 	  .word _handler //     UART8_IRQHandler                  /* UART8                        */
+ 112 0190 1C020000 	  .word _handler //     SPI4_IRQHandler                   /* SPI4                         */
+ 113 0194 1C020000 	  .word _handler //     SPI5_IRQHandler                   /* SPI5                         */
+ 114 0198 1C020000 	  .word _handler //     SPI6_IRQHandler                   /* SPI6                         */
+ARM GAS  main.s 			page 3
+
+
+ 115 019c 1C020000 	  .word _handler //     SAI1_IRQHandler                   /* SAI1                         */
+ 116 01a0 1C020000 	  .word _handler //     LTDC_IRQHandler                   /* LTDC                         */
+ 117 01a4 1C020000 	  .word _handler //     LTDC_ER_IRQHandler                /* LTDC error                   */
+ 118 01a8 1C020000 	  .word _handler //     DMA2D_IRQHandler                  /* DMA2D                        */
+ 119 01ac 1C020000 	  .word _handler //     SAI2_IRQHandler                   /* SAI2                         */
+ 120 01b0 1C020000 	  .word _handler //     QUADSPI_IRQHandler                /* QUADSPI                      */
+ 121 01b4 1C020000 	  .word _handler //     LPTIM1_IRQHandler                 /* LPTIM1                       */
+ 122 01b8 1C020000 	  .word _handler //     CEC_IRQHandler                    /* HDMI_CEC                     */
+ 123 01bc 1C020000 	  .word _handler //     I2C4_EV_IRQHandler                /* I2C4 Event                   */
+ 124 01c0 1C020000 	  .word _handler //     I2C4_ER_IRQHandler                /* I2C4 Error                   */
+ 125 01c4 1C020000 	  .word _handler //     SPDIF_RX_IRQHandler               /* SPDIF_RX                     */
+ 126 01c8 1C020000 	  .word _handler //     0                                 /* Reserved                     */
+ 127 01cc 1C020000 	  .word _handler //     DFSDM1_FLT0_IRQHandler            /* DFSDM1 Filter 0 global Interrupt */
+ 128 01d0 1C020000 	  .word _handler //     DFSDM1_FLT1_IRQHandler            /* DFSDM1 Filter 1 global Interrupt */
+ 129 01d4 1C020000 	  .word _handler //     DFSDM1_FLT2_IRQHandler            /* DFSDM1 Filter 2 global Interrupt */
+ 130 01d8 1C020000 	  .word _handler //     DFSDM1_FLT3_IRQHandler            /* DFSDM1 Filter 3 global Interrupt */
+ 131 01dc 1C020000 	  .word _handler //     SDMMC2_IRQHandler                 /* SDMMC2                       */
+ 132 01e0 1C020000 	  .word _handler //     CAN3_TX_IRQHandler                /* CAN3 TX                      */
+ 133 01e4 1C020000 	  .word _handler //     CAN3_RX0_IRQHandler               /* CAN3 RX0                     */
+ 134 01e8 1C020000 	  .word _handler //     CAN3_RX1_IRQHandler               /* CAN3 RX1                     */
+ 135 01ec 1C020000 	  .word _handler //     CAN3_SCE_IRQHandler               /* CAN3 SCE                     */
+ 136 01f0 1C020000 	  .word _handler //     JPEG_IRQHandler                   /* JPEG                         */
+ 137 01f4 1C020000 	  .word _handler //     MDIOS_IRQHandler                  /* MDIOS                        */
+ 138              	
+ 139              	# LD1 PB0 (green)
+ 140              	# LD2 PB7 (blue)
+ 141              	# LD3 PB14 (red)
+ 142              	
+ 143              	# RCC 0x40023C00 - 0x40023FFF
+ 144              	#   RCC_AHB1ENR 0x30
+ 145              	# GPIOB 0x40020400
+ 146              	#   GPIO
+ 147              	
+ 148              	.equ RCC_AHB1ENR, 0x40023C30
+ 149              	.equ GPIOB_MODER, 0x40020400
+ 150              	.equ GPIOB_ODR,   0x40020414
+ 151              	
+ 152              	.global main
+ 153              	.section .text
+ 154              	.type start, %function
+ 155              	main:
+ 156 01f8 094E     		ldr r6, = RCC_AHB1ENR
+ 157 01fa 0A48     		ldr r0, = 0x00100002 // GPIOBEN bit
+ 158 01fc 3060     		str r0, [r6]
+ 159              	
+ 160 01fe 0A4E     		ldr r6, = GPIOB_MODER
+ 161 0200 0A48     		ldr r0, = 0x10000280
+ 162 0202 3060     		str r0, [r6]
+ 163              	
+ 164 0204 00BF     	        nop
+ 165 0206 00BF     	        nop
+ 166 0208 00BF     	        nop
+ 167              	
+ 168 020a 094E     		ldr r6, = GPIOB_ODR
+ 169 020c 4FF0FF32 		mov r2, 0xffffffff
+ 170 0210 3260     		str r2, [r6]
+ 171              	
+ARM GAS  main.s 			page 4
+
+
+ 172              	loop:
+ 173 0212 00BF     		nop
+ 174 0214 00BF     	        nop
+ 175 0216 00BF     	        nop
+ 176 0218 00BF     	        nop
+ 177 021a FAE7     		b loop
+ 178              	
+ 179              	_handler:
+ 180 021c 00BF     		nop
+ 181 021e FDE7303C 		b _handler
+ 181      02400200 
+ 181      10000004 
+ 181      02408002 
+ 181      00101404 
+ARM GAS  main.s 			page 5
+
+
+DEFINED SYMBOLS
+              main.s:4      *ABS*:0000000020002000 STACKINIT
+              main.s:9      .text:0000000000000000 isr_vectors
+              main.s:155    .text:00000000000001f8 main
+              main.s:179    .text:000000000000021c _handler
+              main.s:148    *ABS*:0000000040023c30 RCC_AHB1ENR
+              main.s:149    *ABS*:0000000040020400 GPIOB_MODER
+              main.s:150    *ABS*:0000000040020414 GPIOB_ODR
+                            .text:0000000000000000 $d
+              main.s:156    .text:00000000000001f8 $t
+              main.s:172    .text:0000000000000212 loop
+              main.s:181    .text:0000000000000220 $d
+
+UNDEFINED SYMBOLS
+start

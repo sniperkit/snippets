@@ -1,0 +1,5 @@
+add_subdirectory(googletest-1.8.0)
+include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
+add_executable(eresp eresp.cpp)
+target_link_libraries(eresp gtest gtest_main eresp_static)
+add_test(NAME eresp COMMAND eresp)

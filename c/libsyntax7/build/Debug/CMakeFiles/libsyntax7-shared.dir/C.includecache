@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../../include/s7.h
+stdlib.h
+-
+stdbool.h
+-
+
+/Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/src/dict/c_language.c
+s7.h
+/Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/src/dict/s7.h
+
+/Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/src/scanner.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+ctype.h
+-
+s7.h
+/Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/src/s7.h
+

@@ -1,0 +1,58 @@
+Performing C SOURCE FILE Test C_SUPPORTS_WMAYBE_UNINITIALIZED failed with the following output:
+Change Dir: /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_71ca7/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_71ca7.dir/build.make CMakeFiles/cmTC_71ca7.dir/build
+Building C object CMakeFiles/cmTC_71ca7.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wformat -Wformat-security -DC_SUPPORTS_WMAYBE_UNINITIALIZED   -Wmaybe-uninitialized -o CMakeFiles/cmTC_71ca7.dir/src.c.o   -c /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp/src.c
+warning: unknown warning option '-Wmaybe-uninitialized'; did you mean '-Wuninitialized'? [-Wunknown-warning-option]
+1 warning generated.
+Linking C executable cmTC_71ca7
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_71ca7.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wformat -Wformat-security -DC_SUPPORTS_WMAYBE_UNINITIALIZED -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_71ca7.dir/src.c.o  -o cmTC_71ca7 
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_FPROFILE_ARCS failed with the following output:
+Change Dir: /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0cb5a/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_0cb5a.dir/build.make CMakeFiles/cmTC_0cb5a.dir/build
+Building C object CMakeFiles/cmTC_0cb5a.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wformat -Wformat-security -Wmissing-variable-declarations -Wshorten-64-to-32 -Wimplicit-function-declaration -Wredundant-decls -Wundef -Wswitch -Wfloat-equal -std=c99 -O0 -ggdb -DC_SUPPORTS_FPROFILE_ARCS   -fprofile-arcs -o CMakeFiles/cmTC_0cb5a.dir/src.c.o   -c /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_0cb5a
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0cb5a.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wformat -Wformat-security -Wmissing-variable-declarations -Wshorten-64-to-32 -Wimplicit-function-declaration -Wredundant-decls -Wundef -Wswitch -Wfloat-equal -std=c99 -O0 -ggdb -DC_SUPPORTS_FPROFILE_ARCS -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_0cb5a.dir/src.c.o  -o cmTC_0cb5a 
+Undefined symbols for architecture x86_64:
+  "_llvm_gcda_emit_arcs", referenced from:
+      ___llvm_gcov_writeout in src.c.o
+  "_llvm_gcda_emit_function", referenced from:
+      ___llvm_gcov_writeout in src.c.o
+  "_llvm_gcda_end_file", referenced from:
+      ___llvm_gcov_writeout in src.c.o
+  "_llvm_gcda_start_file", referenced from:
+      ___llvm_gcov_writeout in src.c.o
+  "_llvm_gcda_summary_info", referenced from:
+      ___llvm_gcov_writeout in src.c.o
+  "_llvm_gcov_init", referenced from:
+      ___llvm_gcov_init in src.c.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[2]: *** [cmTC_0cb5a] Error 1
+make[1]: *** [cmTC_0cb5a/fast] Error 2
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_FSANITIZE failed with the following output:
+Change Dir: /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ea4c4/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_ea4c4.dir/build.make CMakeFiles/cmTC_ea4c4.dir/build
+Building C object CMakeFiles/cmTC_ea4c4.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wformat -Wformat-security -Wmissing-variable-declarations -Wshorten-64-to-32 -Wimplicit-function-declaration -Wredundant-decls -Wundef -Wswitch -Wfloat-equal -std=c99 -O0 -ggdb -DC_SUPPORTS_FSANITIZE   -fsanitize -o CMakeFiles/cmTC_ea4c4.dir/src.c.o   -c /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp/src.c
+clang: error: unknown argument: '-fsanitize'
+make[2]: *** [CMakeFiles/cmTC_ea4c4.dir/src.c.o] Error 1
+make[1]: *** [cmTC_ea4c4/fast] Error 2
+
+Source file was:
+int main(void) { return 0; }

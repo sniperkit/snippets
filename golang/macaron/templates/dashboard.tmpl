@@ -1,0 +1,10 @@
+{{ template "base/head" . }}
+
+<h1>{{.Title}}</h1>
+
+<pre>
+{{ range $item := index .List }}{{ $item }}
+{{ end }}
+<pre>
+
+{{ template "base/footer" . }}

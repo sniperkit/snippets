@@ -1,0 +1,12 @@
+email:
+  template: template.html
+  from: info@vtvblixembosch.nl
+  replyto: penningmeester@vtvblixembosch.nl
+  subject: Nog een keer hier
+  bcc:
+   - jerryjacobs1989@gmail.com
+smtp:
+  host: mail.axc.nl
+  port: 465
+  user: media@vtvblixembosch.nl
+  password: qkgNmNQ2yY 

@@ -1,0 +1,398 @@
+The system is: Darwin - 17.4.0 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /Library/Developer/CommandLineTools/usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is AppleClang, found in "/Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/3.10.2/CompilerIdC/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_922e4/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_922e4.dir/build.make CMakeFiles/cmTC_922e4.dir/build
+Building C object CMakeFiles/cmTC_922e4.dir/testCCompiler.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc    -o CMakeFiles/cmTC_922e4.dir/testCCompiler.c.o   -c /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_922e4
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_922e4.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_922e4.dir/testCCompiler.c.o  -o cmTC_922e4 
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4b903/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_4b903.dir/build.make CMakeFiles/cmTC_4b903.dir/build
+Building C object CMakeFiles/cmTC_4b903.dir/CMakeCCompilerABI.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc    -o CMakeFiles/cmTC_4b903.dir/CMakeCCompilerABI.c.o   -c /usr/local/Cellar/cmake/3.10.2/share/cmake/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_4b903
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4b903.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_4b903.dir/CMakeCCompilerABI.c.o  -o cmTC_4b903 
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin17.4.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -o cmTC_4b903 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_4b903.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a
+@(#)PROGRAM:ld  PROJECT:ld64-305
+configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
+Library search paths:
+	/usr/lib
+	/usr/local/lib
+Framework search paths:
+	/Library/Frameworks/
+	/System/Library/Frameworks/
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_4b903/fast"]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_4b903.dir/build.make CMakeFiles/cmTC_4b903.dir/build]
+  ignore line: [Building C object CMakeFiles/cmTC_4b903.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/cc    -o CMakeFiles/cmTC_4b903.dir/CMakeCCompilerABI.c.o   -c /usr/local/Cellar/cmake/3.10.2/share/cmake/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_4b903]
+  ignore line: [/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4b903.dir/link.txt --verbose=1]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_4b903.dir/CMakeCCompilerABI.c.o  -o cmTC_4b903 ]
+  ignore line: [Apple LLVM version 9.0.0 (clang-900.0.39.2)]
+  ignore line: [Target: x86_64-apple-darwin17.4.0]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
+  link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -o cmTC_4b903 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_4b903.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a]
+    arg [/Library/Developer/CommandLineTools/usr/bin/ld] ==> ignore
+    arg [-demangle] ==> ignore
+    arg [-lto_library] ==> ignore, skip following value
+    arg [/Library/Developer/CommandLineTools/usr/lib/libLTO.dylib] ==> skip value of -lto_library
+    arg [-dynamic] ==> ignore
+    arg [-arch] ==> ignore
+    arg [x86_64] ==> ignore
+    arg [-macosx_version_min] ==> ignore
+    arg [10.13.0] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_4b903] ==> ignore
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [-v] ==> ignore
+    arg [CMakeFiles/cmTC_4b903.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lSystem] ==> lib [System]
+    arg [/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a]
+  Library search paths: [;/usr/lib;/usr/local/lib]
+  Framework search paths: [;/Library/Frameworks/;/System/Library/Frameworks/]
+  remove lib [System]
+  remove lib [/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+  collapse framework dir [/Library/Frameworks/] ==> [/Library/Frameworks]
+  collapse framework dir [/System/Library/Frameworks/] ==> [/System/Library/Frameworks]
+  implicit libs: []
+  implicit dirs: [/usr/lib;/usr/local/lib]
+  implicit fwks: [/Library/Frameworks;/System/Library/Frameworks]
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d0748/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_d0748.dir/build.make CMakeFiles/cmTC_d0748.dir/build
+Building C object CMakeFiles/cmTC_d0748.dir/feature_tests.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_d0748.dir/feature_tests.c.o   -c /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_d0748
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d0748.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_d0748.dir/feature_tests.c.o  -o cmTC_d0748 
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_527cf/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_527cf.dir/build.make CMakeFiles/cmTC_527cf.dir/build
+Building C object CMakeFiles/cmTC_527cf.dir/feature_tests.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_527cf.dir/feature_tests.c.o   -c /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_527cf
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_527cf.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_527cf.dir/feature_tests.c.o  -o cmTC_527cf 
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7c635/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_7c635.dir/build.make CMakeFiles/cmTC_7c635.dir/build
+Building C object CMakeFiles/cmTC_7c635.dir/feature_tests.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_7c635.dir/feature_tests.c.o   -c /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_7c635
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7c635.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_7c635.dir/feature_tests.c.o  -o cmTC_7c635 
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Performing C SOURCE FILE Test C_SUPPORTS_STD_C11 succeeded with the following output:
+Change Dir: /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4e254/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_4e254.dir/build.make CMakeFiles/cmTC_4e254.dir/build
+Building C object CMakeFiles/cmTC_4e254.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -DC_SUPPORTS_STD_C11   -std=c11 -o CMakeFiles/cmTC_4e254.dir/src.c.o   -c /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_4e254
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4e254.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -DC_SUPPORTS_STD_C11 -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_4e254.dir/src.c.o  -o cmTC_4e254 
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_WALL succeeded with the following output:
+Change Dir: /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6c7c9/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_6c7c9.dir/build.make CMakeFiles/cmTC_6c7c9.dir/build
+Building C object CMakeFiles/cmTC_6c7c9.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -std=c11 -DC_SUPPORTS_WALL   -Wall -o CMakeFiles/cmTC_6c7c9.dir/src.c.o   -c /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_6c7c9
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6c7c9.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -std=c11 -DC_SUPPORTS_WALL -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_6c7c9.dir/src.c.o  -o cmTC_6c7c9 
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_WEXTRA succeeded with the following output:
+Change Dir: /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f0b90/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_f0b90.dir/build.make CMakeFiles/cmTC_f0b90.dir/build
+Building C object CMakeFiles/cmTC_f0b90.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -std=c11 -Wall -DC_SUPPORTS_WEXTRA   -Wextra -o CMakeFiles/cmTC_f0b90.dir/src.c.o   -c /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_f0b90
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f0b90.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -std=c11 -Wall -DC_SUPPORTS_WEXTRA -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_f0b90.dir/src.c.o  -o cmTC_f0b90 
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_WSHADOW succeeded with the following output:
+Change Dir: /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8a642/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_8a642.dir/build.make CMakeFiles/cmTC_8a642.dir/build
+Building C object CMakeFiles/cmTC_8a642.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -std=c11 -Wall -Wextra -DC_SUPPORTS_WSHADOW   -Wshadow -o CMakeFiles/cmTC_8a642.dir/src.c.o   -c /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_8a642
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8a642.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -std=c11 -Wall -Wextra -DC_SUPPORTS_WSHADOW -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_8a642.dir/src.c.o  -o cmTC_8a642 
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_D_FORTIFY_SOURCE_2 succeeded with the following output:
+Change Dir: /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6533e/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_6533e.dir/build.make CMakeFiles/cmTC_6533e.dir/build
+Building C object CMakeFiles/cmTC_6533e.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -D_FORTIFY_SOURCE=2  -std=c11 -Wall -Wextra -Wshadow -DC_SUPPORTS_D_FORTIFY_SOURCE_2   -o CMakeFiles/cmTC_6533e.dir/src.c.o   -c /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_6533e
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6533e.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -std=c11 -Wall -Wextra -Wshadow -DC_SUPPORTS_D_FORTIFY_SOURCE_2 -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_6533e.dir/src.c.o  -o cmTC_6533e 
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_FSTRICT_ALIASING succeeded with the following output:
+Change Dir: /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_61476/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_61476.dir/build.make CMakeFiles/cmTC_61476.dir/build
+Building C object CMakeFiles/cmTC_61476.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -DC_SUPPORTS_FSTRICT_ALIASING   -fstrict-aliasing -o CMakeFiles/cmTC_61476.dir/src.c.o   -c /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_61476
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_61476.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -DC_SUPPORTS_FSTRICT_ALIASING -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_61476.dir/src.c.o  -o cmTC_61476 
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_WFORMAT succeeded with the following output:
+Change Dir: /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_17fa3/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_17fa3.dir/build.make CMakeFiles/cmTC_17fa3.dir/build
+Building C object CMakeFiles/cmTC_17fa3.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -DC_SUPPORTS_WFORMAT   -Wformat -o CMakeFiles/cmTC_17fa3.dir/src.c.o   -c /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_17fa3
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_17fa3.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -DC_SUPPORTS_WFORMAT -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_17fa3.dir/src.c.o  -o cmTC_17fa3 
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_WFORMAT_SECURITY succeeded with the following output:
+Change Dir: /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_758c3/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_758c3.dir/build.make CMakeFiles/cmTC_758c3.dir/build
+Building C object CMakeFiles/cmTC_758c3.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wformat -DC_SUPPORTS_WFORMAT_SECURITY   -Wformat-security -o CMakeFiles/cmTC_758c3.dir/src.c.o   -c /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_758c3
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_758c3.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wformat -DC_SUPPORTS_WFORMAT_SECURITY -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_758c3.dir/src.c.o  -o cmTC_758c3 
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_WMISSING_VARIABLE_DECLARATIONS succeeded with the following output:
+Change Dir: /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5228d/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_5228d.dir/build.make CMakeFiles/cmTC_5228d.dir/build
+Building C object CMakeFiles/cmTC_5228d.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wformat -Wformat-security -DC_SUPPORTS_WMISSING_VARIABLE_DECLARATIONS   -Wmissing-variable-declarations -o CMakeFiles/cmTC_5228d.dir/src.c.o   -c /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_5228d
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5228d.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wformat -Wformat-security -DC_SUPPORTS_WMISSING_VARIABLE_DECLARATIONS -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_5228d.dir/src.c.o  -o cmTC_5228d 
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_WSHORTEN_64_TO_32 succeeded with the following output:
+Change Dir: /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9441a/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_9441a.dir/build.make CMakeFiles/cmTC_9441a.dir/build
+Building C object CMakeFiles/cmTC_9441a.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wformat -Wformat-security -Wmissing-variable-declarations -DC_SUPPORTS_WSHORTEN_64_TO_32   -Wshorten-64-to-32 -o CMakeFiles/cmTC_9441a.dir/src.c.o   -c /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_9441a
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9441a.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wformat -Wformat-security -Wmissing-variable-declarations -DC_SUPPORTS_WSHORTEN_64_TO_32 -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_9441a.dir/src.c.o  -o cmTC_9441a 
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_WIMPLICIT_FUNCTION_DECLARATION succeeded with the following output:
+Change Dir: /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5c9b6/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_5c9b6.dir/build.make CMakeFiles/cmTC_5c9b6.dir/build
+Building C object CMakeFiles/cmTC_5c9b6.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wformat -Wformat-security -Wmissing-variable-declarations -Wshorten-64-to-32 -DC_SUPPORTS_WIMPLICIT_FUNCTION_DECLARATION   -Wimplicit-function-declaration -o CMakeFiles/cmTC_5c9b6.dir/src.c.o   -c /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_5c9b6
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5c9b6.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wformat -Wformat-security -Wmissing-variable-declarations -Wshorten-64-to-32 -DC_SUPPORTS_WIMPLICIT_FUNCTION_DECLARATION -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_5c9b6.dir/src.c.o  -o cmTC_5c9b6 
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_WREDUNDANT_DECLS succeeded with the following output:
+Change Dir: /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3e34e/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_3e34e.dir/build.make CMakeFiles/cmTC_3e34e.dir/build
+Building C object CMakeFiles/cmTC_3e34e.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wformat -Wformat-security -Wmissing-variable-declarations -Wshorten-64-to-32 -Wimplicit-function-declaration -DC_SUPPORTS_WREDUNDANT_DECLS   -Wredundant-decls -o CMakeFiles/cmTC_3e34e.dir/src.c.o   -c /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_3e34e
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3e34e.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wformat -Wformat-security -Wmissing-variable-declarations -Wshorten-64-to-32 -Wimplicit-function-declaration -DC_SUPPORTS_WREDUNDANT_DECLS -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_3e34e.dir/src.c.o  -o cmTC_3e34e 
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_WUNDEF succeeded with the following output:
+Change Dir: /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fded0/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_fded0.dir/build.make CMakeFiles/cmTC_fded0.dir/build
+Building C object CMakeFiles/cmTC_fded0.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wformat -Wformat-security -Wmissing-variable-declarations -Wshorten-64-to-32 -Wimplicit-function-declaration -Wredundant-decls -DC_SUPPORTS_WUNDEF   -Wundef -o CMakeFiles/cmTC_fded0.dir/src.c.o   -c /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_fded0
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fded0.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wformat -Wformat-security -Wmissing-variable-declarations -Wshorten-64-to-32 -Wimplicit-function-declaration -Wredundant-decls -DC_SUPPORTS_WUNDEF -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_fded0.dir/src.c.o  -o cmTC_fded0 
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_WSWITCH succeeded with the following output:
+Change Dir: /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fc302/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_fc302.dir/build.make CMakeFiles/cmTC_fc302.dir/build
+Building C object CMakeFiles/cmTC_fc302.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wformat -Wformat-security -Wmissing-variable-declarations -Wshorten-64-to-32 -Wimplicit-function-declaration -Wredundant-decls -Wundef -DC_SUPPORTS_WSWITCH   -Wswitch -o CMakeFiles/cmTC_fc302.dir/src.c.o   -c /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_fc302
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fc302.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wformat -Wformat-security -Wmissing-variable-declarations -Wshorten-64-to-32 -Wimplicit-function-declaration -Wredundant-decls -Wundef -DC_SUPPORTS_WSWITCH -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_fc302.dir/src.c.o  -o cmTC_fc302 
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_WFLOAT_EQUAL succeeded with the following output:
+Change Dir: /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_74ed0/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_74ed0.dir/build.make CMakeFiles/cmTC_74ed0.dir/build
+Building C object CMakeFiles/cmTC_74ed0.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wformat -Wformat-security -Wmissing-variable-declarations -Wshorten-64-to-32 -Wimplicit-function-declaration -Wredundant-decls -Wundef -Wswitch -DC_SUPPORTS_WFLOAT_EQUAL   -Wfloat-equal -o CMakeFiles/cmTC_74ed0.dir/src.c.o   -c /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_74ed0
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_74ed0.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wformat -Wformat-security -Wmissing-variable-declarations -Wshorten-64-to-32 -Wimplicit-function-declaration -Wredundant-decls -Wundef -Wswitch -DC_SUPPORTS_WFLOAT_EQUAL -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_74ed0.dir/src.c.o  -o cmTC_74ed0 
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_STD_C99 succeeded with the following output:
+Change Dir: /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_29ac0/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_29ac0.dir/build.make CMakeFiles/cmTC_29ac0.dir/build
+Building C object CMakeFiles/cmTC_29ac0.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wformat -Wformat-security -Wmissing-variable-declarations -Wshorten-64-to-32 -Wimplicit-function-declaration -Wredundant-decls -Wundef -Wswitch -Wfloat-equal -DC_SUPPORTS_STD_C99   -std=c99 -o CMakeFiles/cmTC_29ac0.dir/src.c.o   -c /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_29ac0
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_29ac0.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wformat -Wformat-security -Wmissing-variable-declarations -Wshorten-64-to-32 -Wimplicit-function-declaration -Wredundant-decls -Wundef -Wswitch -Wfloat-equal -DC_SUPPORTS_STD_C99 -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_29ac0.dir/src.c.o  -o cmTC_29ac0 
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_O0 succeeded with the following output:
+Change Dir: /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4611f/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_4611f.dir/build.make CMakeFiles/cmTC_4611f.dir/build
+Building C object CMakeFiles/cmTC_4611f.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wformat -Wformat-security -Wmissing-variable-declarations -Wshorten-64-to-32 -Wimplicit-function-declaration -Wredundant-decls -Wundef -Wswitch -Wfloat-equal -std=c99 -DC_SUPPORTS_O0   -O0 -o CMakeFiles/cmTC_4611f.dir/src.c.o   -c /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_4611f
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4611f.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wformat -Wformat-security -Wmissing-variable-declarations -Wshorten-64-to-32 -Wimplicit-function-declaration -Wredundant-decls -Wundef -Wswitch -Wfloat-equal -std=c99 -DC_SUPPORTS_O0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_4611f.dir/src.c.o  -o cmTC_4611f 
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_GGDB succeeded with the following output:
+Change Dir: /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1f8a0/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_1f8a0.dir/build.make CMakeFiles/cmTC_1f8a0.dir/build
+Building C object CMakeFiles/cmTC_1f8a0.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wformat -Wformat-security -Wmissing-variable-declarations -Wshorten-64-to-32 -Wimplicit-function-declaration -Wredundant-decls -Wundef -Wswitch -Wfloat-equal -std=c99 -O0 -DC_SUPPORTS_GGDB   -ggdb -o CMakeFiles/cmTC_1f8a0.dir/src.c.o   -c /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_1f8a0
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1f8a0.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wformat -Wformat-security -Wmissing-variable-declarations -Wshorten-64-to-32 -Wimplicit-function-declaration -Wredundant-decls -Wundef -Wswitch -Wfloat-equal -std=c99 -O0 -DC_SUPPORTS_GGDB -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_1f8a0.dir/src.c.o  -o cmTC_1f8a0 
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_FTEST_COVERAGE succeeded with the following output:
+Change Dir: /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1e588/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_1e588.dir/build.make CMakeFiles/cmTC_1e588.dir/build
+Building C object CMakeFiles/cmTC_1e588.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wformat -Wformat-security -Wmissing-variable-declarations -Wshorten-64-to-32 -Wimplicit-function-declaration -Wredundant-decls -Wundef -Wswitch -Wfloat-equal -std=c99 -O0 -ggdb -DC_SUPPORTS_FTEST_COVERAGE   -ftest-coverage -o CMakeFiles/cmTC_1e588.dir/src.c.o   -c /Users/jerry/src/github.com/xor-gate/c-by-example/libsyntax7/build/Debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_1e588
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1e588.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -std=c11 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wformat -Wformat-security -Wmissing-variable-declarations -Wshorten-64-to-32 -Wimplicit-function-declaration -Wredundant-decls -Wundef -Wswitch -Wfloat-equal -std=c99 -O0 -ggdb -DC_SUPPORTS_FTEST_COVERAGE -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_1e588.dir/src.c.o  -o cmTC_1e588 
+
+Source file was:
+int main(void) { return 0; }

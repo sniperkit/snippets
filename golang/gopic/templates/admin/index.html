@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title>{{ .Title }}</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/components/container.min.css">
+	<style type="text/css">
+  body {
+    background-color: #FFFFFF;
+  }
+  .ui.menu .item img.logo {
+    margin-right: 1.5em;
+  }
+  .main.container {
+    margin-top: 7em;
+  }
+  .wireframe {
+    margin-top: 2em;
+  }
+  .ui.footer.segment {
+    margin: 5em 0em 0em;
+    padding: 5em 0em;
+  }
+  </style>
+</head>
+<body>
+  <div class="ui menu">
+    <div class="ui container">
+      <a href="#" class="header item">
+        GoPic
+      </a>
+      <a href="#" class="item">Home</a>
+    </div>
+  </div>
+  <div class="ui main text container"></div>
+	<table class="ui striped table">
+		<thead>
+		<tr>
+			<th>Name</th>
+		</tr>
+		<thead>
+		<tbody>
+		{{ range .Paths }}
+		<tr>
+			<td><a href="/by-folder-id/{{.Hash}}">{{.Path}}</a></td>
+		<tr>
+		{{ end }}
+		</tbody>
+	</table>
+  </div>
+</body>
+</html>
