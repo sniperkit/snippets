@@ -1,0 +1,8 @@
+{
+	"expire" : "infinite",
+	"port"   : "7123",
+	"secret" : "ff09357f8bcab4971f34b086bc9d5bfa",
+	"root"   : "./storage",
+	"static" : "./static",
+	"prefix" : "/"
+}

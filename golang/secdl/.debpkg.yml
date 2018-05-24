@@ -1,0 +1,20 @@
+# config file for https://github.com/xor-gate/debpkg
+name: secdl
+version: 0.1.0
+architecture: amd64
+maintainer: Jerry Jacobs
+maintainer_email: jerry.jacobs@xor-gate.org
+homepage: https://github.com/xor-gate/secdl
+section: devel
+priority: standard
+built_using: xor-gate/debpkg
+description:
+   short: This is a short description
+   long: >
+       Bla bla
+       Bla Bla
+       .
+       Dusse
+files:
+  - file: secdl
+    dest: {{.BINDIR}}/secdl
