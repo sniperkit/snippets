@@ -35,9 +35,9 @@ func (c *SSHClient) SetPrivateKeyFromFile(filename string) error {
 	return nil
 }
 
-func (c *SSHClient) Connect(host string) error {
-	// TODO use net.URL to auto-append port
-	sc, err := ssh.Dial("tcp", host+":6222", c.cfg)
+func (c *SSHClient) Connect(user, host string) error {
+	c.cfg.User = user
+	sc, err := ssh.Dial("tcp", host, c.cfg)
 	if err != nil {
 		return err
 	}

@@ -5,6 +5,7 @@ import (
     "net"
     "fmt"
     "log"
+	"bytes"
 	"golang.org/x/crypto/ssh"
 	"net/url"
 	"crypto/sha256"
@@ -20,16 +21,25 @@ func (r *SSHFPResolver) HostKeyCallback(hostname string, remote net.Addr, key ss
 	if err != nil {
 		return err
 	}
-	//fmt.Println("SSH pubkey MD5:", ssh.FingerprintLegacyMD5(key))
-	fmt.Println("SSH pubkey SHA256:", sha256.Sum256(key.Marshal()))
+
+	keyFpSHA256 := sha256.Sum256(key.Marshal())
+	fmt.Println("SSH pubkey SHA256:", keyFpSHA256)
 
 	fmt.Println("DNS:")
 	for _, sshfp := range l {
             fmt.Printf("%v\n", sshfp)
 		raw, _ := hex.DecodeString(sshfp.FingerPrint)
-	    fmt.Println("raw", raw)
+		fmt.Println("raw", raw)
+
+		// Check if there is a match
+		if bytes.Equal(keyFpSHA256[:], raw) {
+			fmt.Println("sshfp: good to go!")
+			return nil
+		}
 	}
-	return nil
+
+	fmt.Println("sshfp: poor setup, no SSHFP...")
+	return fmt.Errorf("sshfp: no host key found")
 }
 
 func (r *SSHFPResolver) Lookup(host string) ([]*dns.SSHFP, error) {

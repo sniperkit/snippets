@@ -7,6 +7,7 @@ import (
 func main() {
 	res := &SSHFPResolver{}
 	ssh := NewSSHClient(res.HostKeyCallback)
-	err := ssh.Connect("shulgin.xor-gate.org")
+	ssh.SetPrivateKeyFromFile("/Users/jerry/.ssh/id_rsa")
+	err := ssh.Connect("jerry", "shulgin.xor-gate.org:6222")
 	fmt.Println(err)
 }
