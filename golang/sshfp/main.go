@@ -1,5 +1,12 @@
 package main
 
+import (
+	"fmt"
+)
+
 func main() {
-	_, _ = LookupSSHFP("shulgin.xor-gate.org")
+	res := &SSHFPResolver{}
+	ssh := NewSSHClient(res.HostKeyCallback)
+	err := ssh.Connect("shulgin.xor-gate.org")
+	fmt.Println(err)
 }
