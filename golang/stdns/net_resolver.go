@@ -2,7 +2,7 @@ package stdns
 
 import (
 	"net"
-	"fmt"
+	"net/url"
 	"context"
 )
 
@@ -18,9 +18,16 @@ func NewStdResolver() *StdResolver {
 	}
 }
 
-func (sr *StdResolver) Lookup(ctx context.Context, name string) (*Entry, error) {
-        txt, err := sr.LookupTXT(ctx, name)
-    fmt.Println(err)
-    fmt.Println(txt)
-	return nil, nil
+func (sr *StdResolver) Lookup(ctx context.Context, uri string) (Entries, error) {
+	u, err := url.Parse(uri)
+	if err != nil {
+		return nil, err
+	}
+
+        txt, err := sr.LookupTXT(ctx, u.Hostname())
+	if err != nil {
+		return nil, err
+	}
+
+	return DecodeTXTRecords(u, txt)
 }
