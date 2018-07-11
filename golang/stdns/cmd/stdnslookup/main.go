@@ -8,7 +8,7 @@ import (
 
 func main() {
 	r := stdns.NewStdResolver()
-	entries, _ := r.Lookup(context.Background(), "syncthing://syncthing@dorpstraat.xor-gate.org")
+	entries, _ := r.Lookup(context.Background(), "syncthing@dorpstraat.xor-gate.org")
 	for _, entry := range entries {
 		fmt.Println("URL", entry.URL)
 		fmt.Println("Username", entry.Username())

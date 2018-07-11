@@ -1,0 +1,10 @@
+xor-gate.org {
+	etcd xor-gate.org {
+		stubzones
+		path /skydns
+		endpoint http://localhost:2379
+	}
+	forward . 8.8.8.8:53
+	log
+	dump
+}

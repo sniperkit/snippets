@@ -2,7 +2,6 @@ package stdns
 
 import (
 	"net"
-	"net/url"
 	"context"
 )
 
@@ -19,7 +18,7 @@ func NewStdResolver() *StdResolver {
 }
 
 func (sr *StdResolver) Lookup(ctx context.Context, uri string) (Entries, error) {
-	u, err := url.Parse(uri)
+	u, err := ParseURI(uri)
 	if err != nil {
 		return nil, err
 	}

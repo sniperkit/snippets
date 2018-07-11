@@ -5,6 +5,8 @@ import (
 	"context"
 )
 
+const URLScheme = "syncthing://"
+
 type Resolver interface {
 	Lookup(ctx context.Context, url string) (Entries, error)
 }
