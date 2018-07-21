@@ -25,9 +25,15 @@ type Item struct {
 	XMLName xml.Name `xml:"item"`
 	Title string `xml:"title"`
 	SparkleReleaseNotesLink string `xml:"sparkle:releaseNotesLink,omitempty"`
-	Description string `xml:"description"`
+	Description CdataString `xml:"description"`
 	PubDate string `xml:"pubDate"`
 	Enclosure Enclosure `xml:"enclosure"`
+}
+
+// CdataString for XML CDATA
+// See issue: https://github.com/golang/go/issues/16198
+type CdataString struct {
+	Value string `xml:",cdata"`
 }
 
 type Items []Item

@@ -34,7 +34,7 @@ func (ach *appCastXMLHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) 
 
 	w.Write([]byte(xml.Header))
 	xw := xml.NewEncoder(w)
-	xw.Encode(s)
+	log.Println(xw.Encode(s))
 }
 
 func NewHTTPServer(addr string, items Items) (*HTTPServer, error) {
