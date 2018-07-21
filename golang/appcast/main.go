@@ -19,10 +19,24 @@ func main() {
 
 	var items sparkle.Items
 
+	// FAKE newest item
+	item := sparkle.Item {
+		Title: "Version 0.14.48-1",
+		SparkleReleaseNotesLink: "https://xor-gate.github.io/syncthing-macosx",
+		PubDate: time.Now().Format(time.RFC1123),
+		Enclosure: sparkle.Enclosure {
+			SparkleShortVersionString: "0.14.48-1",
+			SparkleVersion: "0144801",
+			Type: "application/octet-stream",
+			URL: "https://github.com/xor-gate/syncthing-macosx/releases/download/v0.14.48-1/Syncthing-0.14.46-1.dmg",
+		},
+	}
+	items = append(items, item)
+
 	for i, release := range a.Releases {
 		fmt.Println(fmt.Sprintf("Release #%d:", i+1), release.Version, release.Title, release.PublishedDateTime, release.IsPrerelease)
 
-		item := sparkle.Item {
+		item = sparkle.Item {
 			Title: release.Title,
 			PubDate: release.PublishedDateTime.Format(time.RFC1123),
 			Enclosure: sparkle.Enclosure{
