@@ -11,7 +11,11 @@ type HTTPServer struct {
 	srv *http.Server
 }
 
-func ServeAppCastXML(w http.ResponseWriter, r *http.Request) {
+type appCastXMLHandler struct {
+	Items
+}
+
+func (ach *appCastXMLHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	log.Println("load appcast.xml")
 	s := &Sparkle{
 		Version: "2.0",
@@ -19,19 +23,11 @@ func ServeAppCastXML(w http.ResponseWriter, r *http.Request) {
 		XMLNSDC: "http://purl.org/dc/elements/1.1/",
 		Channels: []Channel {
 			Channel{
-				Items: []Item {
-					Item{
-						Title: "Version 0.14.46-1",
-						SparkleReleaseNotesLink: "https://xor-gate.github.io/syncthing-macosx/releases/0.14.46-1.html",
-						PubDate: "Thu, 19 Apr 2018 21:36:00 GMT+2",
-						Enclosure: Enclosure {
-							SparkleShortVersionString: "0.14.46-1",
-							SparkleVersion: "0144601",
-							Type: "application/octet-stream",
-							URL: "https://github.com/xor-gate/syncthing-macosx/releases/download/v0.14.46-1/Syncthing-0.14.46-1.dmg",
-						},
-					},
-				},
+				Title: "Synthing for Mac OS X Changelog",
+				Link: "https://xor-gate.github.io/syncthing-macosx/appcast.xml",
+				Description: "Most recent changes with links to updates.",
+				Language: "en",
+				Items: ach.Items,
 			},
 		},
 	}
@@ -41,10 +37,10 @@ func ServeAppCastXML(w http.ResponseWriter, r *http.Request) {
 	xw.Encode(s)
 }
 
-func NewHTTPServer(addr string) (*HTTPServer, error) {
+func NewHTTPServer(addr string, items Items) (*HTTPServer, error) {
 	mux := http.NewServeMux()
 
-	mux.HandleFunc("/appcast.xml", ServeAppCastXML)
+	mux.Handle("/appcast.xml", &appCastXMLHandler{Items: items})
 
 	srv := &http.Server {
 		Addr: addr,

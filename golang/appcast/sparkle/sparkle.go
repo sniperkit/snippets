@@ -30,6 +30,8 @@ type Item struct {
 	Enclosure Enclosure `xml:"enclosure"`
 }
 
+type Items []Item
+
 type Enclosure struct {
 	XMLName xml.Name `xml:enclosure`
 	SparkleShortVersionString string `xml:"sparkle:shortVersionString,attr"`
