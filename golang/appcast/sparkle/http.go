@@ -15,6 +15,14 @@ type appCastXMLHandler struct {
 	Items
 }
 
+type appCastAssetHandler struct {
+}
+
+func (acah *appCastAssetHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	log.Println("dl", r.URL.Path)
+	http.Redirect(w, r, "https://github.com/xor-gate/syncthing-macosx/releases/download/v0.14.46-1/Syncthing-0.14.46-1.dmg", http.StatusMovedPermanently)
+}
+
 func (ach *appCastXMLHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	log.Println("load appcast.xml")
 	s := &Sparkle{
@@ -41,6 +49,7 @@ func NewHTTPServer(addr string, items Items) (*HTTPServer, error) {
 	mux := http.NewServeMux()
 
 	mux.Handle("/appcast.xml", &appCastXMLHandler{Items: items})
+	mux.Handle("/dl/", &appCastAssetHandler{})
 
 	srv := &http.Server {
 		Addr: addr,
