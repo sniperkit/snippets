@@ -3,21 +3,29 @@ package main
 import (
 	"fmt"
 	"time"
+	"strings"
 	"strconv"
+	"context"
 
-	"github.com/victorpopkov/go-appcast"
+	"github.com/hashicorp/go-version"
+	"github.com/google/go-github/github"
+	"gopkg.in/russross/blackfriday.v2"
 	"github.com/xor-gate/snippets/golang/appcast/sparkle"
 )
 
+func MarkdownToHTML(md string) string {
+	return string(blackfriday.Run([]byte(md)))
+}
+
+// LastVersion : Check last version of package
+func Releases() ([]*github.RepositoryRelease, error) {
+	client := github.NewClient(nil)
+	ctx := context.Background()
+	releases, _, err := client.Repositories.ListReleases(ctx, "xor-gate", "syncthing-macosx", nil)
+	return releases, err
+}
+
 func main() {
-	a := appcast.New()
-	a.LoadFromURL("https://github.com/xor-gate/syncthing-macosx/releases.atom")
-	a.GenerateChecksum(appcast.SHA256)
-	a.ExtractReleases()
-
-	fmt.Println("Checksum:", a.GetChecksum())
-	fmt.Println("Provider:", a.GetProvider())
-
 	var items sparkle.Items
 
 	// FAKE newest item
@@ -37,36 +45,48 @@ func main() {
 	items = append(items, item)
 */
 
-	for i, release := range a.Releases {
-		fmt.Println(fmt.Sprintf("Release #%d:", i+1), release.Version, release.Title, release.PublishedDateTime, release.IsPrerelease)
+	releases, _ := Releases()
 
+	for _, release := range releases {
 		// Decode git tag into sparkleVersion for CFBundleVersion check
 		// "v0.14.48-1" -> "144801"
-		version := release.Version.Segments()
-		if len(version) != 3 {
+		rTag := release.GetTagName()
+		rVersion, _ := version.NewVersion(rTag)
+		rSegments := rVersion.Segments()
+		if len(rSegments) != 3 {
 			continue
 		}
 
-		distVersion, err := strconv.ParseUint(release.Version.Prerelease(), 10, 8)
+		distVersion, err := strconv.ParseUint(rVersion.Prerelease(), 10, 8)
 		if err != nil {
 			continue
 		}
-		sparkleVersion := fmt.Sprintf("%02d%02d%02d", version[1], version[2], distVersion)
+		sparkleVersion := fmt.Sprintf("%02d%02d%02d", rSegments[1], rSegments[2], distVersion)
 
-/*
-		fmt.Println("downloads:", len(release.Downloads))
-		for _, download := range release.Downloads {
-			fmt.Println(download.URL)
+		var dmgAssetURL string
+
+		for _, asset := range release.Assets {
+			url := asset.GetBrowserDownloadURL()
+			if !strings.HasSuffix(url, ".dmg") {
+				continue
+			}
+			dmgAssetURL = url
 		}
-*/
+
+		if dmgAssetURL == "" {
+			continue
+		}
+
+		htmlDescription := MarkdownToHTML(release.GetBody())
 
 		item := sparkle.Item {
-			Title: release.Title,
-			PubDate: release.PublishedDateTime.Format(time.RFC1123),
-			Description: sparkle.CdataString{Value: release.Description},
+			Title: release.GetName(),
+			PubDate: release.PublishedAt.Format(time.RFC1123),
+			Description: sparkle.CdataString{Value: htmlDescription},
 			Enclosure: sparkle.Enclosure{
-				SparkleShortVersionString: release.Version.String(),
+				SparkleShortVersionString: rTag,
 				SparkleVersion: sparkleVersion,
+				URL: dmgAssetURL,
 				Type: "application/octet-stream",
 			},
 		}

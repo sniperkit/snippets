@@ -25,7 +25,7 @@ type Item struct {
 	XMLName xml.Name `xml:"item"`
 	Title string `xml:"title"`
 	SparkleReleaseNotesLink string `xml:"sparkle:releaseNotesLink,omitempty"`
-	Description CdataString `xml:"description"`
+	Description CdataString `xml:"description,omitempty"`
 	PubDate string `xml:"pubDate"`
 	Enclosure Enclosure `xml:"enclosure"`
 }
