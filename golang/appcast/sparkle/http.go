@@ -1,7 +1,9 @@
 package sparkle
 
 import (
+	"fmt"
 	"log"
+	"regexp"
 	"net/http"
 	"encoding/xml"
 )
@@ -18,13 +20,22 @@ type appCastXMLHandler struct {
 type appCastAssetHandler struct {
 }
 
+var redirRe = regexp.MustCompile("v.*/Syncthing-(.*).dmg")
+
 func (acah *appCastAssetHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	log.Println("dl", r.URL.Path)
-	http.Redirect(w, r, "https://github.com/xor-gate/syncthing-macosx/releases/download/v0.14.46-1/Syncthing-0.14.46-1.dmg", http.StatusMovedPermanently)
+	log.Println("dl", r.URL.Path, r.RemoteAddr)
+	sm := redirRe.FindStringSubmatch(r.URL.Path)
+
+	if len(sm) != 2 {
+		return
+	}
+
+	redirectURL := fmt.Sprintf("https://github.com/xor-gate/syncthing-macosx/releases/download/v%s/Syncthing-%s.dmg", sm[1], sm[1])
+	http.Redirect(w, r, redirectURL, http.StatusMovedPermanently)
 }
 
 func (ach *appCastXMLHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	log.Println("load appcast.xml")
+	log.Println("load appcast.xml", r.RemoteAddr)
 	s := &Sparkle{
 		Version: "2.0",
 		XMLNSSparkle: "http://www.andymatuschak.org/xml-namespaces/sparkle",
