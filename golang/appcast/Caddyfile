@@ -1,0 +1,14 @@
+# localhost:8080/xor-gate/syncthing-macosx/releases/download/v0.14.46-1/Syncthing-0.14.46-1.dmg
+# -> https://github.com/xor-gate/syncthing-macosx/releases/download/v0.14.46-1/Syncthing-0.14.46-1.dmg
+localhost:8080/xor-gate/syncthing-macosx/releases/download {
+	redir / https://github.com/{path}
+	log stdout
+	errors stdout
+}
+
+# should contain a static appcast.xml
+localhost:8080/xor-gate/syncthing-macosx {
+	root pub
+	log stdout
+	errors stdout
+}

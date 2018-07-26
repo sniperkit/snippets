@@ -1,8 +1,10 @@
 package main
 
 import (
+	"os"
 	"fmt"
 	"time"
+	"encoding/xml"
 	"strings"
 	"strconv"
 	"context"
@@ -37,13 +39,12 @@ func main() {
 			SparkleShortVersionString: "0.14.48-1",
 			SparkleVersion: "144801",
 			Type: "application/octet-stream",
-			URL: "http://127.0.0.1:8080/dl/Syncthing-0.14.46-1.dmg",
+			URL: "http://localhost:8080/xor-gate/syncthing-macosx/releases/download/v0.14.46-1/Syncthing-0.14.46-1.dmg",
 		},
 	}
 	items = append(items, item)
 
 	releases, _ := Releases()
-
 	for _, release := range releases {
 		// Decode git tag into sparkleVersion for CFBundleVersion check
 		// "v0.14.48-1" -> "144801"
@@ -53,6 +54,12 @@ func main() {
 		if len(rSegments) != 3 {
 			continue
 		}
+
+		if rTag[0] != 'v' {
+			continue
+		}
+
+		dmgVersion := rTag[1:]
 
 		distVersion, err := strconv.ParseUint(rVersion.Prerelease(), 10, 8)
 		if err != nil {
@@ -67,8 +74,7 @@ func main() {
 			if !strings.HasSuffix(url, ".dmg") {
 				continue
 			}
-			dmgAssetURL = "http://127.0.0.1:8080/dl/Syncthing-v0.14.46-1.dmg" //url
-			fmt.Println(asset.GetName())
+			dmgAssetURL = fmt.Sprintf("https://github.com/xor-gate/syncthing-macosx/releases/download/%s/Syncthing-%s.dmg", rTag, dmgVersion)
 		}
 
 		if dmgAssetURL == "" {
@@ -91,6 +97,22 @@ func main() {
 		items = append(items, item)
 	}
 
-	srv, _ := sparkle.NewHTTPServer("127.0.0.1:8080", items)
-	srv.Serve()
+	s := &sparkle.Sparkle{
+		Version: "2.0",
+		XMLNSSparkle: "http://www.andymatuschak.org/xml-namespaces/sparkle",
+		XMLNSDC: "http://purl.org/dc/elements/1.1/",
+		Channels: []sparkle.Channel {
+			sparkle.Channel{
+				Title: "Synthing for Mac OS X Changelog",
+				Link: "https://xor-gate.github.io/syncthing-macosx/appcast.xml",
+				Description: "Most recent changes with links to updates.",
+				Language: "en",
+				Items: items,
+			},
+		},
+	}
+
+	os.Stdout.Write([]byte(xml.Header))
+	xw := xml.NewEncoder(os.Stdout)
+	xw.Encode(s)
 }

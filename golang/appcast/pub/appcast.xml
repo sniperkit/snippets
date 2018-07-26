@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Synthing for Mac OS X Changelog</title>
+    <link>https://xor-gate.github.io/syncthing-macosx/appcast.xml</link>
+    <description>Most recent changes with links to updates.</description>
+    <language>en</language>
+    <item>
+      <title>Version 0.14.48-1</title>
+      <description><![CDATA[Die shit is los]]></description>
+      <pubDate>Thu, 26 Jul 2018 14:01:52 CEST</pubDate>
+      <enclosure sparkle:shortVersionString="0.14.48-1" sparkle:version="144801" type="application/octet-stream" url="http://localhost:8080/xor-gate/syncthing-macosx/releases/download/v0.14.46-1/Syncthing-0.14.46-1.dmg"/>
+    </item>
+    <item>
+      <title>Added some items to the menu</title>
+      <description><![CDATA[<ul>
+<li>Add items to menu
+
+<ul>
+<li>Pause All Devices/Resume All Devices
+</li>
+<li>Rescan All
+
+For a complete list of changes compared to previous release see <a href="https://github.com/xor-gate/syncthing-macosx/compare/v0.14.33-1...v0.14.46-1">https://github.com/xor-gate/syncthing-macosx/compare/v0.14.33-1&hellip;v0.14.46-1</a></li>
+</ul></li>
+</ul>
+]]></description>
+      <pubDate>Thu, 19 Apr 2018 19:29:51 UTC</pubDate>
+      <enclosure sparkle:shortVersionString="v0.14.46-1" sparkle:version="144601" type="application/octet-stream" url="https://github.com/xor-gate/syncthing-macosx/releases/download/v0.14.46-1/Syncthing-0.14.46-1.dmg"/>
+    </item>
+    <item>
+      <title>Long time no see</title>
+      <description><![CDATA[<p>Release notes:
+
+Application bundle now signed by @virusman with <code>Developer ID Application: Victor Babenko (JUW2CNK88G)</code>
+
+* Improvements
+  * Update the status icon when Syncthing is synchronising <a href="https://github.com/xor-gate/syncthing-macosx/pull/29">#29</a>
+  * Update syncthing executable to v0.14.33 <a href="https://github.com/xor-gate/syncthing-macosx/pull/35">#35</a>
+  * Read <code>config.xml</code> on first start <a href="https://github.com/xor-gate/syncthing-macosx/pull/36">#36</a>
+  * Don&rsquo;t open web browser on start of syncthing (<code>-no-browser</code> argument)
+  * Automate application bundle signing <a href="https://github.com/xor-gate/syncthing-macosx/pull/34">#34</a>
+* Bugfixes
+  * Unable to Copy-paste of API key input box with cmd+v in configuration window <a href="https://github.com/xor-gate/syncthing-macosx/issues/20">#20</a>
+  * Cannot toggle &ldquo;start at login&rdquo; <a href="https://github.com/xor-gate/syncthing-macosx/issues/25">#25</a></p>
+]]></description>
+      <pubDate>Thu, 03 Aug 2017 07:52:23 UTC</pubDate>
+      <enclosure sparkle:shortVersionString="v0.14.33-1" sparkle:version="143301" type="application/octet-stream" url="https://github.com/xor-gate/syncthing-macosx/releases/download/v0.14.33-1/Syncthing-0.14.33-1.dmg"/>
+    </item>
+    <item>
+      <title>Fix problem while not loading the preferences window</title>
+      <description><![CDATA[<p>The preferences window was not loading because <code>StartAtLogin</code> default was not written. Which resulted in an assertion when setting Nil string in the window.
+- See issue #16 for more details</p>
+]]></description>
+      <pubDate>Sun, 16 Oct 2016 15:10:00 UTC</pubDate>
+      <enclosure sparkle:shortVersionString="v0.14.8-2" sparkle:version="140802" type="application/octet-stream" url="https://github.com/xor-gate/syncthing-macosx/releases/download/v0.14.8-2/Syncthing-0.14.8-2.dmg"/>
+    </item>
+    <item>
+      <title>Bugfix release on v0.14.8</title>
+      <description><![CDATA[<p><strong>NOTE: It seems this <a href="https://github.com/xor-gate/syncthing-macosx/issues/16#issuecomment-254051006">release fails</a> to open the preferences window when installing on a virgin machine</strong></p>
+
+<p>Fixes #13 - Doesn&rsquo;t run syncthing executable in background at startup.</p>
+]]></description>
+      <pubDate>Wed, 05 Oct 2016 18:42:17 UTC</pubDate>
+      <enclosure sparkle:shortVersionString="v0.14.8-1" sparkle:version="140801" type="application/octet-stream" url="https://github.com/xor-gate/syncthing-macosx/releases/download/v0.14.8-1/Syncthing-0.14.8-1.dmg"/>
+    </item>
+    <item>
+      <title>Fixes for auto-updater</title>
+      <description><![CDATA[<ul>
+<li>Fixes
+
+<ul>
+<li>Don&rsquo;t check for updates on application start directly</li>
+<li>Bundle now has correct version for use with auto-updates</li>
+</ul></li>
+<li>UI
+
+<ul>
+<li>About window now has a <code>check for updates</code> button</li>
+</ul></li>
+</ul>
+]]></description>
+      <pubDate>Tue, 09 Aug 2016 11:35:12 UTC</pubDate>
+      <enclosure sparkle:shortVersionString="v0.14.3-4" sparkle:version="140304" type="application/octet-stream" url="https://github.com/xor-gate/syncthing-macosx/releases/download/v0.14.3-4/Syncthing-0.14.3-4.dmg"/>
+    </item>
+    <item>
+      <title>UI bugfix release</title>
+      <description><![CDATA[<p>This release ships some UI bugfixes from @virusman. It still ships syncthing 0.14.3.</p>
+]]></description>
+      <pubDate>Sun, 07 Aug 2016 15:32:42 UTC</pubDate>
+      <enclosure sparkle:shortVersionString="v0.14.3-1" sparkle:version="140301" type="application/octet-stream" url="https://github.com/xor-gate/syncthing-macosx/releases/download/v0.14.3-1/Syncthing-0.14.3-1.dmg"/>
+    </item>
+  </channel>
+</rss>
