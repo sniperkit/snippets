@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package pubsub;
+
+message Empty {
+}
+
+message Message {
+	bytes topic = 1;
+	bytes data = 2;
+}
+
+//message SubscribeRequest {
+//	bytes topic = 1;
+//}
+
+//service SubcribeService {
+//	rpc Subscribe(SubscribeRequest) returns (stream Message);
+//}
+
+service PublishService {
+	rpc Publish(stream Message) returns (Empty);
+}
