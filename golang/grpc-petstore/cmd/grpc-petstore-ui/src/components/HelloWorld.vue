@@ -1,9 +1,21 @@
 <template>
     <div class="hello">
-        <h1>{{ msg }}</h1>
-        <button v-on:click="sendData()">Send</button>
-        <br />
-        <br />
+  <!-- @submit handles any form of submission. -->
+  <!-- .prevent keeps the event from bubbling around and doing anything else. -->
+  <form @submit.prevent="createPet">
+    <label>
+      Name:
+      <input type="text" v-model="pet.name"/>
+    </label>
+    <label>
+  <select name="petStatus" v-model="pet.status">
+    <option value="PetStatusAvailable">Available</option>
+    <option value="PetStatusPending">Pending</option>
+    <option value="PetStatusSold">Sold</option>
+  </select>
+    </label>
+    <button type="submit">Submit</button>
+  </form>
     </div>
 </template>
 
@@ -14,9 +26,19 @@ export default {
     msg: String
   },
 
+  data() {
+      return {
+		pet: {
+			name: "",
+			status: "PetStatusUnknown",
+		}
+	}
+  },
+
   methods : {
-            sendData() {
-                this.$http.post("http://127.0.0.1:8080/v1/pet", '{"name": "Fish"}', { headers: { "content-type": "application/json" } }).then(result => {
+            createPet() {
+                this.$http.post("http://127.0.0.1:8080/v1/pet", this.pet, { headers: { "content-type": "application/json" } }).then(result => {
+
                     this.response = result.data;
                 });
             }

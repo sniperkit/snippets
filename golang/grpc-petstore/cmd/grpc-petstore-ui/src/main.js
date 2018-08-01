@@ -3,7 +3,6 @@ import App from './App.vue'
 import VueResource from 'vue-resource'
 
 Vue.use(VueResource)
-Vue.http.options.emulateJSON = true;
 Vue.config.productionTip = false
 
 new Vue({
