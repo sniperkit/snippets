@@ -1,6 +1,7 @@
 # gRPC Petstore
 
 This is hand-translate Swagger Petstore example in gRPC with gRPC-Gateway (REST)
+The web gui is build using Vue.js
 
 ## Usage
 
