@@ -1,0 +1,114 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "petstore.proto",
+    "version": "version not set"
+  },
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/v1/pet": {
+      "post": {
+        "operationId": "CreatePet",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/petstoreEmpty"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/petstorePet"
+            }
+          }
+        ],
+        "tags": [
+          "PetstoreService"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "petstoreCategory": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "int64"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "petstoreEmpty": {
+      "type": "object"
+    },
+    "petstorePet": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "int64"
+        },
+        "category": {
+          "$ref": "#/definitions/petstoreCategory"
+        },
+        "name": {
+          "type": "string"
+        },
+        "photoUrls": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/petstoreTag"
+          }
+        },
+        "status": {
+          "$ref": "#/definitions/petstorePetStatus"
+        }
+      }
+    },
+    "petstorePetStatus": {
+      "type": "string",
+      "enum": [
+        "PetStatusUnknown",
+        "PetStatusAvailable",
+        "PetStatusPending",
+        "PetStatusSold"
+      ],
+      "default": "PetStatusUnknown"
+    },
+    "petstoreTag": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "int64"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
