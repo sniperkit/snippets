@@ -8,10 +8,10 @@
       <input type="text" v-model="pet.name"/>
     </label>
     <label>
-  <select name="petStatus" v-model="pet.status">
-    <option value="PetStatusAvailable">Available</option>
-    <option value="PetStatusPending">Pending</option>
-    <option value="PetStatusSold">Sold</option>
+  <select type="number" name="petStatus" v-model.number="pet.status">
+    <option value="1">Available</option>
+    <option value="2">Pending</option>
+    <option value="3">Sold</option>
   </select>
     </label>
     <button type="submit">Submit</button>
@@ -30,7 +30,7 @@ export default {
       return {
 		pet: {
 			name: "",
-			status: "PetStatusUnknown",
+			status: 0,
 		}
 	}
   },
