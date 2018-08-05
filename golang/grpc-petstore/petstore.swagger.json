@@ -16,6 +16,29 @@
   ],
   "paths": {
     "/v1/pet": {
+      "get": {
+        "operationId": "ReadPet",
+        "responses": {
+          "200": {
+            "description": "(streaming responses)",
+            "schema": {
+              "$ref": "#/definitions/petstorePet"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "PetstoreService"
+        ]
+      },
       "post": {
         "operationId": "CreatePet",
         "responses": {
@@ -27,6 +50,126 @@
           }
         },
         "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/petstorePet"
+            }
+          }
+        ],
+        "tags": [
+          "PetstoreService"
+        ]
+      }
+    },
+    "/v1/pet/{id}": {
+      "get": {
+        "operationId": "ReadPet2",
+        "responses": {
+          "200": {
+            "description": "(streaming responses)",
+            "schema": {
+              "$ref": "#/definitions/petstorePet"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "PetstoreService"
+        ]
+      },
+      "delete": {
+        "operationId": "DeletePet",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/petstoreEmpty"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          },
+          {
+            "name": "category.id",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "int64"
+          },
+          {
+            "name": "category.name",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "photoUrls",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "PetStatusUnknown",
+              "PetStatusAvailable",
+              "PetStatusPending",
+              "PetStatusSold"
+            ],
+            "default": "PetStatusUnknown"
+          }
+        ],
+        "tags": [
+          "PetstoreService"
+        ]
+      },
+      "put": {
+        "operationId": "UpdatePet",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/petstoreEmpty"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          },
           {
             "name": "body",
             "in": "body",

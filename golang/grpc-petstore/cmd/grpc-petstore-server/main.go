@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net"
+	"time"
 	"context"
 	"flag"
 	pb "github.com/xor-gate/snippets/golang/grpc-petstore"
@@ -18,6 +19,29 @@ type server struct {}
 
 func (s *server) CreatePet(ctx context.Context, pet *pb.Pet) (*pb.Empty, error) {
 	fmt.Printf("CreatePet:\n%+v\n", pet)
+	return &pb.Empty{}, nil
+}
+
+func (s *server) ReadPet(req *pb.ReadPetRequest, rps pb.PetstoreService_ReadPetServer) error {
+	fmt.Printf("ReadPet:\n%+v\n", req)
+	for i := int64(0); i < 11; i++ {
+		err := rps.Send(&pb.Pet{Id: i})
+		if err != nil {
+			log.Println(err)
+			return nil
+		}
+		time.Sleep(time.Second)
+	}
+	return nil
+}
+
+func (s *server) UpdatePet(ctx context.Context, pet *pb.Pet) (*pb.Empty, error) {
+	fmt.Printf("UpdatePet:\n%+v\n", pet)
+	return &pb.Empty{}, nil
+}
+
+func (s *server) DeletePet(ctx context.Context, pet *pb.Pet) (*pb.Empty, error) {
+	fmt.Printf("DeletePet:\n%+v\n", pet)
 	return &pb.Empty{}, nil
 }
 

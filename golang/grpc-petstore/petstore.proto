@@ -54,6 +54,10 @@ message Pet {
 	PetStatus status = 6;
 }
 
+message ReadPetRequest {
+	int64 id = 1;
+}
+
 message Empty {
 
 }
@@ -64,6 +68,28 @@ service PetstoreService {
 		option (google.api.http) = {
 			post: "/v1/pet"
 			body: "*"
+		};
+	};
+
+	rpc ReadPet(ReadPetRequest) returns (stream Pet) {
+		option (google.api.http) = {
+			get: "/v1/pet"
+			additional_bindings {
+				get: "/v1/pet/{id}"
+			}
+		};
+	};
+
+	rpc UpdatePet(Pet) returns (Empty) {
+		option (google.api.http) = {
+			put: "/v1/pet/{id}"
+			body: "*"
+		};
+	};
+
+	rpc DeletePet(Pet) returns (Empty) {
+		option (google.api.http) = {
+			delete: "/v1/pet/{id}"
 		};
 	};
 }
