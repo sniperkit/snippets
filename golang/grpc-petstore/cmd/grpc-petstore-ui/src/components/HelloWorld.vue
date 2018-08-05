@@ -16,7 +16,17 @@
     </label>
     <button type="submit">Submit</button>
   </form>
+
+
+	<ul v-for="pet in pets">
+	<li>
+	    {{ pet.id }}: {{ pet.name }}
+	</li>
+	</ul>
+
     </div>
+
+
 </template>
 
 <script>
@@ -26,18 +36,41 @@ export default {
     msg: String
   },
 
+  mounted() {
+       this.getPets();
+  },
+
   data() {
       return {
-		pet: {
-			name: "",
-			status: 0,
-		}
+          pets: null,
+          pet: {
+               name: "",
+               status: 0,
+            }
 	}
   },
 
   methods : {
+	   getPets() {
+	               this.$http.get("http://127.0.0.1:8080/v1/pets", null, { headers: { "content-type": "application/json" } }).then(result => {
+		   var lines = result.bodyText.split('\n');
+
+
+			var pets = [];
+			// TODO weird hack last line is not good for JSON.parse
+			for(var i = 0;i < lines.length-1;i++) {
+				var pet;
+				pet = JSON.parse(lines[i]);
+				pets.push(pet.result);
+			}
+
+                    this.pets = pets;
+                });
+		
+	    },
+
             createPet() {
-                this.$http.post("http://127.0.0.1:8080/v1/pet", this.pet, { headers: { "content-type": "application/json" } }).then(result => {
+                this.$http.post("http://127.0.0.1:8080/v1/pets", this.pet, { headers: { "content-type": "application/json" } }).then(result => {
 
                     this.response = result.data;
                 });
