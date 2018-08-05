@@ -354,15 +354,15 @@ func RegisterPetstoreServiceHandlerClient(ctx context.Context, mux *runtime.Serv
 }
 
 var (
-	pattern_PetstoreService_CreatePet_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "pet"}, ""))
+	pattern_PetstoreService_CreatePet_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "pets"}, ""))
 
-	pattern_PetstoreService_ReadPet_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "pet"}, ""))
+	pattern_PetstoreService_ReadPet_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "pets"}, ""))
 
-	pattern_PetstoreService_ReadPet_1 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2}, []string{"v1", "pet", "id"}, ""))
+	pattern_PetstoreService_ReadPet_1 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2}, []string{"v1", "pets", "id"}, ""))
 
-	pattern_PetstoreService_UpdatePet_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2}, []string{"v1", "pet", "id"}, ""))
+	pattern_PetstoreService_UpdatePet_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2}, []string{"v1", "pets", "id"}, ""))
 
-	pattern_PetstoreService_DeletePet_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2}, []string{"v1", "pet", "id"}, ""))
+	pattern_PetstoreService_DeletePet_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2}, []string{"v1", "pets", "id"}, ""))
 )
 
 var (

@@ -15,7 +15,7 @@
     "application/json"
   ],
   "paths": {
-    "/v1/pet": {
+    "/v1/pets": {
       "get": {
         "operationId": "ReadPet",
         "responses": {
@@ -64,7 +64,7 @@
         ]
       }
     },
-    "/v1/pet/{id}": {
+    "/v1/pets/{id}": {
       "get": {
         "operationId": "ReadPet2",
         "responses": {

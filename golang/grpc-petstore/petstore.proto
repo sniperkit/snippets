@@ -66,30 +66,30 @@ message Empty {
 service PetstoreService {
 	rpc CreatePet(Pet) returns (Empty) {
 		option (google.api.http) = {
-			post: "/v1/pet"
+			post: "/v1/pets"
 			body: "*"
 		};
 	};
 
 	rpc ReadPet(ReadPetRequest) returns (stream Pet) {
 		option (google.api.http) = {
-			get: "/v1/pet"
+			get: "/v1/pets"
 			additional_bindings {
-				get: "/v1/pet/{id}"
+				get: "/v1/pets/{id}"
 			}
 		};
 	};
 
 	rpc UpdatePet(Pet) returns (Empty) {
 		option (google.api.http) = {
-			put: "/v1/pet/{id}"
+			put: "/v1/pets/{id}"
 			body: "*"
 		};
 	};
 
 	rpc DeletePet(Pet) returns (Empty) {
 		option (google.api.http) = {
-			delete: "/v1/pet/{id}"
+			delete: "/v1/pets/{id}"
 		};
 	};
 }

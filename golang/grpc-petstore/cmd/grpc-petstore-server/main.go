@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"log"
 	"net"
-	"time"
 	"context"
 	"flag"
 	pb "github.com/xor-gate/snippets/golang/grpc-petstore"
@@ -15,22 +14,27 @@ var (
 	port = flag.Int("port", 9090, "Petstore gRPC port")
 )
 
-type server struct {}
+type server struct {
+	petID int64
+	pets []*pb.Pet
+}
 
 func (s *server) CreatePet(ctx context.Context, pet *pb.Pet) (*pb.Empty, error) {
 	fmt.Printf("CreatePet:\n%+v\n", pet)
+	pet.Id = s.petID
+	s.pets = append(s.pets, pet)
+	s.petID++
 	return &pb.Empty{}, nil
 }
 
 func (s *server) ReadPet(req *pb.ReadPetRequest, rps pb.PetstoreService_ReadPetServer) error {
 	fmt.Printf("ReadPet:\n%+v\n", req)
-	for i := int64(0); i < 11; i++ {
-		err := rps.Send(&pb.Pet{Id: i})
+	for _, pet := range s.pets {
+		err := rps.Send(pet)
 		if err != nil {
 			log.Println(err)
 			return nil
 		}
-		time.Sleep(time.Second)
 	}
 	return nil
 }
@@ -53,7 +57,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	s := &server{}
+	s := &server{petID: 1}
 	g := grpc.NewServer()
 	pb.RegisterPetstoreServiceServer(g, s)
 	fmt.Println("gRPC Petstore listening on", addr)
